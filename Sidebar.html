@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- [Head] start -->
+
+<head>
+    <title>Home | Able Pro Dashboard Template</title>
+    <!-- [Meta] -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Able Pro is trending dashboard template made using Bootstrap 5 design framework. Able Pro is available in Bootstrap, React, CodeIgniter, Angular,  and .net Technologies.">
+    <meta name="keywords"
+        content="Bootstrap admin template, Dashboard UI Kit, Dashboard Template, Backend Panel, react dashboard, angular dashboard">
+    <meta name="author" content="Phoenixcoded">
+
+    <!-- [Favicon] icon -->
+    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon"> <!-- [Font] Family -->
+    <link rel="stylesheet" href="../assets/fonts/inter/inter.css" id="main-font-link" />
+    <!-- [Tabler Icons] https://tablericons.com -->
+    <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css">
+    <!-- [Feather Icons] https://feathericons.com -->
+    <link rel="stylesheet" href="../assets/fonts/feather.css">
+    <!-- [Font Awesome Icons] https://fontawesome.com/icons -->
+    <link rel="stylesheet" href="../assets/fonts/fontawesome.css">
+    <!-- [Material Icons] https://fonts.google.com/icons -->
+    <link rel="stylesheet" href="../assets/fonts/material.css">
+    <!-- [Template CSS Files] -->
+    <link rel="stylesheet" href="../assets/css/style.css" id="main-style-link">
+    <link rel="stylesheet" href="../assets/css/style-preset.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-14K1GBX9FG"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'G-14K1GBX9FG');
+    </script>
+    <!-- WiserNotify -->
+    <script>
+        !(function () {
+            if (window.t4hto4) console.log('WiserNotify pixel installed multiple time in this page');
+            else {
+                window.t4hto4 = !0;
+                var t = document,
+                    e = window,
+                    n = function () {
+                        var e = t.createElement('script');
+                        (e.type = 'text/javascript'),
+                            (e.async = !0),
+                            (e.src = 'https://pt.wisernotify.com/pixel.js?ti=1jclj6jkfc4hhry'),
+                            document.body.appendChild(e);
+                    };
+                'complete' === t.readyState ? n() : window.attachEvent ? e.attachEvent('onload', n) : e.addEventListener('load', n, !1);
+            }
+        })();
+    </script>
+    <!-- Microsoft clarity -->
+    <script type="text/javascript">
+        (function (c, l, a, r, i, t, y) {
+            c[a] =
+                c[a] ||
+                function () {
+                    (c[a].q = c[a].q || []).push(arguments);
+                };
+            t = l.createElement(r);
+            t.async = 1;
+            t.src = 'https://www.clarity.ms/tag/' + i;
+            y = l.getElementsByTagName(r)[0];
+            y.parentNode.insertBefore(t, y);
+        })(window, document, 'clarity', 'script', 'gkn6wuhrtb');
+    </script>
+
+</head>
+
+<body>
+    <nav class="pc-sidebar">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+                <a href="../dashboard/index.html" class="b-brand text-primary">
+                    <!-- ========   Change your logo from here   ============ -->
+                    <img src="../assets/images/logo-dark.svg" class="img-fluid logo-lg" alt="logo">
+                    <!-- <span class="badge bg-light-success rounded-pill ms-2 theme-version">v9.0</span> -->
+                </a>
+            </div>
+            <div class="navbar-content">
+                <ul class="pc-navbar">
+
+                    <li class="pc-item pc-hasmenu">
+                        <a href="../dashboard/index.html" class="pc-link">
+                            <span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-status-up"></use>
+                                </svg>
+                            </span>
+                            <span class="pc-mtext">Dashboard</span>
+                        </a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="../component/Enquiry.html" class="pc-link">
+                            <span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-direct-inbox"></use>
+                                </svg>
+                            </span>
+                            <span class="pc-mtext">Enquiry</span></a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="../component/Quotation.html" class="pc-link">
+                            <span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-notification-status"></use>
+                                </svg>
+                            </span>
+                            <span class="pc-mtext">Quotation</span></a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="../component/Event.html" class="pc-link">
+                            <span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-message-2"></use>
+                                </svg>
+                            </span>
+                            <span class="pc-mtext">Event</span></a>
+                    </li>
+
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
+                            <span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-shopping-bag"></use>
+                                </svg>
+                            </span>
+                            <span class="pc-mtext">Master Entry</span><span class="pc-arrow"><i
+                                    data-feather="chevron-right"></i></span></a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">Customer</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">Crew</a>
+                            </li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">Editor</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="pc-item">
+                        <a href="../component/BookingReceipt.html" class="pc-link">
+                            <span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-document-filter"></use>
+                                </svg>
+                            </span>
+                            <span class="pc-mtext">Booking Receipt</span></a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="../application/calendar.html" class="pc-link">
+                            <span class="pc-micon">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-calendar-1"></use>
+                                </svg>
+                            </span>
+                            <span class="pc-mtext">Caremony Calendar</span></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <script src="../assets/js/plugins/apexcharts.min.js"></script>
+    <script src="../assets/js/pages/dashboard-default.js"></script>
+    <!-- [Page Specific JS] end -->
+    <!-- Required Js -->
+    <script src="../assets/js/plugins/popper.min.js"></script>
+    <script src="../assets/js/plugins/simplebar.min.js"></script>
+    <script src="../assets/js/plugins/bootstrap.min.js"></script>
+    <script src="../assets/js/fonts/custom-font.js"></script>
+    <script src="../assets/js/pcoded.js"></script>
+    <script src="../assets/js/plugins/feather.min.js"></script>
+
+
+
+
+
+    <script>layout_change('light');</script>
+
+
+
+
+    <script>layout_theme_contrast_change('false');</script>
+
+
+
+    <script>change_box_container('false');</script>
+
+
+    <script>layout_caption_change('true');</script>
+
+
+
+
+    <script>layout_rtl_change('false');</script>
+
+
+    <script>preset_change("preset-1");</script>
+    <script src="../HeaderSidebar.js"></script>
+</body>
+<!-- [Body] end -->
+
+</html>
