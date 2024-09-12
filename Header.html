@@ -3,7 +3,7 @@
 <!-- [Head] start -->
 
 <head>
-    <title>Home | Able Pro Dashboard Template</title>
+    <title>Indicorpit - Photography</title>
     <!-- [Meta] -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
@@ -15,7 +15,7 @@
     <meta name="author" content="Phoenixcoded">
 
     <!-- [Favicon] icon -->
-    <link rel="icon" href="../assets/images/favicon.svg" type="image/x-icon"> <!-- [Font] Family -->
+    <link rel="icon" href="../assets/images/crop_logo.png" type="image/x-icon"> <!-- [Font] Family -->
     <link rel="stylesheet" href="../assets/fonts/inter/inter.css" id="main-font-link" />
     <!-- [Tabler Icons] https://tablericons.com -->
     <link rel="stylesheet" href="../assets/fonts/tabler-icons.min.css">
@@ -30,6 +30,8 @@
     <link rel="stylesheet" href="../assets/css/style-preset.css">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-14K1GBX9FG"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() {
@@ -73,19 +75,135 @@
             y.parentNode.insertBefore(t, y);
         })(window, document, 'clarity', 'script', 'gkn6wuhrtb');
     </script>
+    <style>
+        #abc {
+            display: none;
+        }
+
+        #crewTypePieChart {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        #editorPieChart {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        .pc-submenu {
+            list-style-type: none;
+            /* Removes bullets */
+            padding-left: 0;
+            /* Removes default padding */
+            margin-left: 0;
+            /* Removes default margin */
+        }
+
+        .pc-submenu .pc-item {
+            margin-bottom: 5px;
+            /* Optional: adds spacing between items */
+        }
+    </style>
 </head>
 <!-- [Head] end -->
 <!-- [Body] Start -->
 
-<body data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme_contrast=""
-    data-pc-theme="light">
+<body data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme_contrast="" data-pc-theme="light">
     <!-- [ Pre-loader ] start -->
     <div class="loader-bg">
         <div class="loader-track">
             <div class="loader-fill"></div>
         </div>
     </div>
-    <!-- [ Sidebar Menu ] end --> <!-- [ Header Topbar ] start -->
+
+    <nav id="navbar" class="pc-sidebar">
+        <div class="navbar-wrapper">
+            <div class="m-header">
+                <a href="../dashboard/index.html" class="b-brand text-primary">
+                    <img src="../assets/images/company_logo.png" class="img-fluid logo-lg" alt="logo">
+                </a>
+            </div>
+            <div class="navbar-content">
+                <ul class="pc-navbar">
+                    <li class="pc-item pc-hasmenu">
+                        <!-- <a href="../dashboard/index.html" class="pc-link"  style="color:red"> -->
+                        <a href="../dashboard/index.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </span>
+                            <span class="pc-mtext">Dashboard</span>
+                        </a>
+
+                    </li>
+                    <li class="pc-item">
+                        <a href="../component/Enquiry.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-question-circle"></i>
+                            </span>
+                            <span class="pc-mtext">Enquiry</span>
+                        </a>
+
+                    </li>
+                    <li class="pc-item">
+                        <a href="../component/Quotation.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-file-alt"></i>
+                            </span>
+                            <span class="pc-mtext">Quotation</span>
+                        </a>
+
+                    </li>
+                    <li class="pc-item">
+                        <a href="../component/Event.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </span>
+                            <span class="pc-mtext">Event</span>
+                        </a>
+
+                    </li>
+
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-database"></i>
+                            </span>
+                            <span class="pc-mtext">Master Entry</span>
+                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">
+                                    <i class="fas fa-user-tie"></i>Customer</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">
+                                    <i class="fas fa-users"></i>Crew</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">
+                                    <i class="fas fa-pencil-alt"></i>Editor</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="pc-item">
+                        <a href="../component/BookingReceipt.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-receipt"></i>
+                            </span>
+                            <span class="pc-mtext">Booking Receipt</span>
+                        </a>
+
+                    </li>
+                    <li class="pc-item">
+                        <a href="../application/calendar.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-calendar"></i>
+                            </span>
+                            <span class="pc-mtext">Ceremony Calendar</span>
+                        </a>
+
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
     <header class="pc-header">
         <div class="header-wrapper"> <!-- [Mobile Media Block] start -->
             <div class="me-auto pc-mob-drp">
@@ -117,9 +235,10 @@
                     </li>
                 </ul>
             </div>
-            <!-- [Mobile Media Block end] -->
+
             <div class="ms-auto">
                 <ul class="list-unstyled">
+
                     <li class="dropdown pc-h-item">
                         <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false">
@@ -148,36 +267,72 @@
                             </a>
                         </div>
                     </li>
-                    <li class="dropdown pc-h-item">
-                        <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
-                            <svg class="pc-icon">
-                                <use xlink:href="#custom-setting-2"></use>
-                            </svg>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-                            <a href="#!" class="dropdown-item">
-                                <i class="ti ti-user"></i>
-                                <span>My Account</span>
+                    <!-- Header Menu  -->
+                    <div id="abc">
+                        <li class="dropdown pc-h-item abc">
+                            <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
+                                role="button" aria-haspopup="false" aria-expanded="false">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-setting-2"></use>
+                                </svg>
                             </a>
-                            <a href="#!" class="dropdown-item">
-                                <i class="ti ti-settings"></i>
-                                <span>Settings</span>
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                                <i class="ti ti-headset"></i>
-                                <span>Support</span>
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                                <i class="ti ti-lock"></i>
-                                <span>Lock Screen</span>
-                            </a>
-                            <a href="#!" class="dropdown-item">
-                                <i class="ti ti-power"></i>
-                                <span>Logout</span>
-                            </a>
-                        </div>
-                    </li>
+
+                            <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
+                                <a href="../dashboard/index.html" class="dropdown-item">
+
+                                    <i class="fas fa-tachometer-alt"></i>
+
+                                    <span>Dashboard</span>
+                                </a>
+
+
+                                <a href="../component/Enquiry.html" class="dropdown-item">
+                                    <i class="ti ti-search"></i>
+                                    <span>Enquiry</span>
+                                </a>
+                                <a href="../component/Quotation.html" class="dropdown-item">
+                                    <i class="ti ti-receipt"></i>
+                                    <span>Quotation</span>
+                                </a>
+                                <a href="../component/Event.html" class="dropdown-item">
+                                    <i class="ti ti-calendar"></i>
+                                    <span>Event</span>
+                                </a>
+
+                                <!-- Master Entry Toggle -->
+                                <a href="#" class="dropdown-item dropdown-toggle" id="masterMenuToggle" role="button">
+                                    <i class="ti ti-folder"></i>
+                                    <span>Master Entry</span>
+                                </a>
+                                <!-- Submenu for Master Entry -->
+                                <div class="dropdown-menu" id="masterMenuSubmenu" style="display: none;">
+                                    <a href="../component/Customer.html" class="dropdown-item">
+                                        <i class="fas fa-user-tie"></i>
+                                        <span>Customer</span>
+                                    </a>
+                                    <a href="../component/Crew.html" class="dropdown-item">
+                                        <i class="fas fa-users"></i>
+                                        <span>Crew</span>
+                                    </a>
+                                    <a href="../component/Editor.html" class="dropdown-item">
+                                        <i class="fas fa-pencil-alt"></i>
+                                        <span>Editor</span>
+                                    </a>
+                                </div>
+
+
+                                <a href="../component/BookingReceipt.html" class="dropdown-item">
+                                    <i class="ti ti-clipboard"></i>
+                                    <span>Booking Receipt</span>
+                                </a>
+                                <a href="../application/calendar.html" class="dropdown-item">
+                                    <i class="ti ti-calendar"></i>
+                                    <span>Ceremony Calendar</span>
+                                </a>
+                            </div>
+                        </li>
+                    </div>
+
                     <li class="pc-h-item">
                         <a href="#" class="pc-head-link me-0" data-bs-toggle="offcanvas" data-bs-target="#announcement"
                             aria-controls="announcement">
@@ -214,8 +369,7 @@
                                                 <span class="float-end text-sm text-muted">2 min ago</span>
                                                 <h5 class="text-body mb-2">UI/UX Design</h5>
                                                 <p class="mb-0">Lorem Ipsum has been the industry's standard dummy text
-                                                    ever
-                                                    since the 1500s,
+                                                    ever since the 1500s,
                                                     when an unknown printer took a galley of
                                                     type and scrambled it to make a type</p>
                                             </div>
@@ -234,8 +388,8 @@
                                                 <span class="float-end text-sm text-muted">1 hour ago</span>
                                                 <h5 class="text-body mb-2">Message</h5>
                                                 <p class="mb-0">Lorem Ipsum has been the industry's standard dummy text
-                                                    ever
-                                                    since the 1500.</p>
+                                                    ever since the 1500.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -253,8 +407,7 @@
                                                 <span class="float-end text-sm text-muted">2 hour ago</span>
                                                 <h5 class="text-body mb-2">Forms</h5>
                                                 <p class="mb-0">Lorem Ipsum has been the industry's standard dummy text
-                                                    ever
-                                                    since the 1500s,
+                                                    ever since the 1500s,
                                                     when an unknown printer took a galley of
                                                     type and scrambled it to make a type</p>
                                             </div>
@@ -273,8 +426,7 @@
                                                 <span class="float-end text-sm text-muted">12 hour ago</span>
                                                 <h5 class="text-body mb-2">Challenge invitation</h5>
                                                 <p class="mb-2"><span class="text-dark">Jonny aber</span> invites to
-                                                    join
-                                                    the challenge</p>
+                                                    join the challenge</p>
                                                 <button class="btn btn-sm btn-outline-secondary me-2">Decline</button>
                                                 <button class="btn btn-sm btn-primary">Accept</button>
                                             </div>
@@ -293,8 +445,7 @@
                                                 <span class="float-end text-sm text-muted">5 hour ago</span>
                                                 <h5 class="text-body mb-2">Security</h5>
                                                 <p class="mb-0">Lorem Ipsum has been the industry's standard dummy text
-                                                    ever
-                                                    since the 1500s,
+                                                    ever since the 1500s,
                                                     when an unknown printer took a galley of
                                                     type and scrambled it to make a type</p>
                                             </div>
@@ -330,20 +481,7 @@
                                         </div>
                                     </div>
                                     <hr class="border-secondary border-opacity-50" />
-                                    <div class="card">
-                                        <div class="card-body py-3">
-                                            <div class="d-flex align-items-center justify-content-between">
-                                                <h5 class="mb-0 d-inline-flex align-items-center"><svg
-                                                        class="pc-icon text-muted me-2">
-                                                        <use xlink:href="#custom-notification-outline"></use>
-                                                    </svg>Notification</h5>
-                                                <div class="form-check form-switch form-check-reverse m-0">
-                                                    <input class="form-check-input f-18" type="checkbox"
-                                                        role="switch" />
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
+
                                     <p class="text-span">Manage</p>
                                     <a href="#" class="dropdown-item">
                                         <span>
@@ -369,60 +507,7 @@
                                             <span>Change Password</span>
                                         </span>
                                     </a>
-                                    <hr class="border-secondary border-opacity-50" />
-                                    <p class="text-span">Team</p>
-                                    <a href="#" class="dropdown-item">
-                                        <span>
-                                            <svg class="pc-icon text-muted me-2">
-                                                <use xlink:href="#custom-profile-2user-outline"></use>
-                                            </svg>
-                                            <span>UI Design team</span>
-                                        </span>
-                                        <div class="user-group">
-                                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image"
-                                                class="avtar" />
-                                            <span class="avtar bg-danger text-white">K</span>
-                                            <span class="avtar bg-success text-white">
-                                                <svg class="pc-icon m-0">
-                                                    <use xlink:href="#custom-user"></use>
-                                                </svg>
-                                            </span>
-                                            <span class="avtar bg-light-primary text-primary">+2</span>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-item">
-                                        <span>
-                                            <svg class="pc-icon text-muted me-2">
-                                                <use xlink:href="#custom-profile-2user-outline"></use>
-                                            </svg>
-                                            <span>Friends Groups</span>
-                                        </span>
-                                        <div class="user-group">
-                                            <img src="../assets/images/user/avatar-1.jpg" alt="user-image"
-                                                class="avtar" />
-                                            <span class="avtar bg-danger text-white">K</span>
-                                            <span class="avtar bg-success text-white">
-                                                <svg class="pc-icon m-0">
-                                                    <use xlink:href="#custom-user"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </a>
-                                    <a href="#" class="dropdown-item">
-                                        <span>
-                                            <svg class="pc-icon text-muted me-2">
-                                                <use xlink:href="#custom-add-outline"></use>
-                                            </svg>
-                                            <span>Add new</span>
-                                        </span>
-                                        <div class="user-group">
-                                            <span class="avtar bg-primary text-white">
-                                                <svg class="pc-icon m-0">
-                                                    <use xlink:href="#custom-add-outline"></use>
-                                                </svg>
-                                            </span>
-                                        </div>
-                                    </a>
+
                                     <hr class="border-secondary border-opacity-50" />
                                     <div class="d-grid mb-3">
                                         <button class="btn btn-primary">
@@ -431,33 +516,7 @@
                                             </svg>Logout
                                         </button>
                                     </div>
-                                    <div class="card border-0 shadow-none drp-upgrade-card mb-0"
-                                        style="background-image: url(../assets/images/layout/img-profile-card.jpg)">
-                                        <div class="card-body">
-                                            <div class="user-group">
-                                                <img src="../assets/images/user/avatar-1.jpg" alt="user-image"
-                                                    class="avtar" />
-                                                <img src="../assets/images/user/avatar-2.jpg" alt="user-image"
-                                                    class="avtar" />
-                                                <img src="../assets/images/user/avatar-3.jpg" alt="user-image"
-                                                    class="avtar" />
-                                                <img src="../assets/images/user/avatar-4.jpg" alt="user-image"
-                                                    class="avtar" />
-                                                <img src="../assets/images/user/avatar-5.jpg" alt="user-image"
-                                                    class="avtar" />
-                                                <span class="avtar bg-light-primary text-primary">+20</span>
-                                            </div>
-                                            <h3 class="my-3 text-dark">245.3k <small
-                                                    class="text-muted">Followers</small>
-                                            </h3>
-                                            <div class="btn btn btn-warning">
-                                                <svg class="pc-icon me-2">
-                                                    <use xlink:href="#custom-logout-1-outline"></use>
-                                                </svg>
-                                                Upgrade to Business
-                                            </div>
-                                        </div>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
@@ -466,7 +525,6 @@
             </div>
         </div>
     </header>
-    <!-- [Page Specific JS] start -->
     <script src="../assets/js/plugins/apexcharts.min.js"></script>
     <script src="../assets/js/pages/dashboard-default.js"></script>
     <!-- [Page Specific JS] end -->
@@ -477,34 +535,26 @@
     <script src="../assets/js/fonts/custom-font.js"></script>
     <script src="../assets/js/pcoded.js"></script>
     <script src="../assets/js/plugins/feather.min.js"></script>
-
-
-
-
-
     <script>layout_change('light');</script>
-
-
-
-
     <script>layout_theme_contrast_change('false');</script>
-
-
-
     <script>change_box_container('false');</script>
-
-
     <script>layout_caption_change('true');</script>
-
-
-
-
     <script>layout_rtl_change('false');</script>
 
 
     <script>preset_change("preset-1");</script>
+    <!-- Include the theme JavaScript -->
+    <script src="../assets/js/theme.js"></script>
 
+    <script>
+        // Load the CustomTheme.html dynamically
+        fetch('../CustomTheme.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('theme-selector').innerHTML = data;
+            })
+            .catch(error => console.error('Error loading CustomTheme.html:', error));
+    </script>
 </body>
-<!-- [Body] end -->
 
 </html>

@@ -20905,7 +20905,7 @@ pre[class*="language-"] > code {
   top: 20px;
   width: 5px;
   height: 5px;
-  background: var(--pc-sidebar-color);
+  /* background: var(--pc-sidebar-color); */
   opacity: 0.5;
   transition: all 0.08s cubic-bezier(0.37, 0.24, 0.53, 0.99);
 }
@@ -20920,7 +20920,8 @@ pre[class*="language-"] > code {
   .pc-item.pc-trigger
   > .pc-link:after,
 .pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-item.active > .pc-link:after {
-  background: var(--pc-sidebar-active-color);
+  /* background: var(--pc-sidebar-active-color); */
+  background: none !important;
 }
 .pc-sidebar
   .pc-navbar
@@ -20933,7 +20934,8 @@ pre[class*="language-"] > code {
 .pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-item:hover > .pc-link:after {
   opacity: 1;
   transform: scale(1.2);
-  background: var(--pc-sidebar-active-color);
+  /* background: var(--pc-sidebar-active-color); */
+  background: none !important;
 }
 .pc-sidebar .pc-navbar > .pc-item .pc-submenu:after {
   left: 30px;
