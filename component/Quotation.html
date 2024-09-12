@@ -58,6 +58,21 @@
             }
         })();
     </script>
+    <style>
+        #abc {
+            display: none;
+        }
+
+        #crewTypePieChart {
+            max-width: 200px;
+            max-height: 200px;
+        }
+
+        #editorPieChart {
+            max-width: 200px;
+            max-height: 200px;
+        }
+    </style>
     <!-- Microsoft clarity -->
     <script type="text/javascript">
         (function (c, l, a, r, i, t, y) {
@@ -86,8 +101,6 @@
             <div class="loader-fill"></div>
         </div>
     </div>
-    <!-- [ Pre-loader ] End -->
-    <!-- [ Sidebar Menu ] start -->
     <nav class="pc-sidebar">
         <div class="navbar-wrapper">
             <div class="m-header">
@@ -99,7 +112,6 @@
             </div>
             <div class="navbar-content">
                 <ul class="pc-navbar">
-
                     <li class="pc-item pc-hasmenu">
                         <a href="../dashboard/index.html" class="pc-link">
                             <span class="pc-micon">
@@ -173,11 +185,12 @@
                             </span>
                             <span class="pc-mtext">Caremony Calendar</span></a>
                     </li>
+
                 </ul>
             </div>
         </div>
     </nav>
-    <!-- [ Sidebar Menu ] end --> <!-- [ Header Topbar ] start -->
+
     <header class="pc-header">
         <div class="header-wrapper"> <!-- [Mobile Media Block] start -->
             <div class="me-auto pc-mob-drp">
@@ -209,9 +222,10 @@
                     </li>
                 </ul>
             </div>
-            <!-- [Mobile Media Block end] -->
+
             <div class="ms-auto">
                 <ul class="list-unstyled">
+
                     <li class="dropdown pc-h-item">
                         <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
                             role="button" aria-haspopup="false" aria-expanded="false">
@@ -240,53 +254,58 @@
                             </a>
                         </div>
                     </li>
-                    <li class="dropdown pc-h-item">
-                        <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
-                            role="button" aria-haspopup="false" aria-expanded="false">
-                            <i class="ti ti-menu pc-icon" style="font-size: 20px;"></i>
-                        </a>
-                        <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-                            <a href="../component/Enquiry.html" class="dropdown-item">
-                                <i class="ti ti-search"></i>
-                                <span>Enquiry</span>
+
+                    <div id="abc">
+                        <li class="dropdown pc-h-item abc">
+                            <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
+                                role="button" aria-haspopup="false" aria-expanded="false">
+                                <svg class="pc-icon">
+                                    <use xlink:href="#custom-setting-2"></use>
+                                </svg>
                             </a>
-                            <a href="../component/Quotation.html" class="dropdown-item">
-                                <i class="ti ti-receipt"></i>
-                                <span>Quotation</span>
-                            </a>
-                            <a href="../component/Event.html" class="dropdown-item">
-                                <i class="ti ti-calendar"></i>
-                                <span>Event</span>
-                            </a>
-                            <a href="#" class="dropdown-item dropdown-toggle" id="masterMenuToggle" role="button">
-                                <i class="ti ti-folder"></i>
-                                <span>Master Entry</span>
-                            </a>
-                            <div class="dropdown-menu" id="masterMenuSubmenu">
-                                <a href="../component/Customer.html" class="dropdown-item">
-                                    <i class="ti ti-id-badge"></i>
-                                    <span>Customer</span>
+                            <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
+                                <a href="../component/Enquiry.html" class="dropdown-item">
+                                    <i class="ti ti-search"></i>
+                                    <span>Enquiry</span>
                                 </a>
-                                <a href="../component/Crew.html" class="dropdown-item">
-                                    <i class="ti ti-user"></i>
-                                    <span>Crew</span>
+                                <a href="../component/Quotation.html" class="dropdown-item">
+                                    <i class="ti ti-receipt"></i>
+                                    <span>Quotation</span>
                                 </a>
-                                <a href="../component/Editor.html" class="dropdown-item">
-                                    <i class="ti ti-pencil-alt"></i>
-                                    <span>Editor</span>
+                                <a href="../component/Event.html" class="dropdown-item">
+                                    <i class="ti ti-calendar"></i>
+                                    <span>Event</span>
+                                </a>
+                                <a href="#" class="dropdown-item dropdown-toggle" id="masterMenuToggle" role="button">
+                                    <i class="ti ti-folder"></i>
+                                    <span>Master Entry</span>
+                                </a>
+                                <div class="dropdown-menu" id="masterMenuSubmenu">
+                                    <a href="../component/Customer.html" class="dropdown-item">
+                                        <i class="ti ti-id-badge"></i>
+                                        <span>Customer</span>
+                                    </a>
+                                    <a href="../component/Crew.html" class="dropdown-item">
+                                        <i class="ti ti-user"></i>
+                                        <span>Crew</span>
+                                    </a>
+                                    <a href="../component/Editor.html" class="dropdown-item">
+                                        <i class="ti ti-pencil-alt"></i>
+                                        <span>Editor</span>
+                                    </a>
+                                </div>
+
+                                <a href="../component/BookingReceipt.html" class="dropdown-item">
+                                    <i class="ti ti-clipboard"></i>
+                                    <span>Booking Receipt</span>
+                                </a>
+                                <a href="../application/calendar.html" class="dropdown-item">
+                                    <i class="ti ti-calendar"></i>
+                                    <span>Ceremony Calendar</span>
                                 </a>
                             </div>
-
-                            <a href="../component/BookingReceipt.html" class="dropdown-item">
-                                <i class="ti ti-clipboard"></i>
-                                <span>Booking Receipt</span>
-                            </a>
-                            <a href="../application/calendar.html" class="dropdown-item">
-                                <i class="ti ti-calendar"></i>
-                                <span>Ceremony Calendar</span>
-                            </a>
-                        </div>
-                    </li>
+                        </li>
+                    </div>
                     <li class="pc-h-item">
                         <a href="#" class="pc-head-link me-0" data-bs-toggle="offcanvas" data-bs-target="#announcement"
                             aria-controls="announcement">
@@ -342,7 +361,8 @@
                                                 <span class="float-end text-sm text-muted">1 hour ago</span>
                                                 <h5 class="text-body mb-2">Message</h5>
                                                 <p class="mb-0">Lorem Ipsum has been the industry's standard dummy text
-                                                    ever since the 1500.</p>
+                                                    ever since the 1500.
+                                                </p>
                                             </div>
                                         </div>
                                     </div>
@@ -799,7 +819,17 @@
     <script src="../assets/js/pcoded.js"></script>
     <script src="../assets/js/plugins/feather.min.js"></script>
 
-
+    <script>
+        document.getElementById('sidebar-hide').addEventListener('click', function (event) {
+            event.preventDefault();
+            var abcItem = document.getElementById('abc');
+            if (abcItem.style.display === 'block') {
+                abcItem.style.display = 'none';
+            } else {
+                abcItem.style.display = 'block';
+            }
+        });
+    </script>
 
 
 
