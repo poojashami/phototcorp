@@ -51,7 +51,6 @@
 document.addEventListener("DOMContentLoaded", function () {
   const currentPage = window.location.pathname.split("/").pop(); // Get the current page name
   const savedColor = localStorage.getItem(`linkColor_${currentPage}`); // Get the page-specific color
-  const navbar = document.getElementById("navbar"); // Get the navbar element
 
   if (savedColor) {
     // Apply the saved color to all links and navbar
@@ -67,11 +66,16 @@ function setLinkColor(color) {
 }
 
 function applyColor(color) {
-  // Apply color to all links
-  const allLinks = document.querySelectorAll("a");
-  if (allLinks.length > 0) {
-    allLinks.forEach((link) => {
-      link.style.color = color;
+  // Select all <li> elements with the class "active"
+  const activeItems = document.getElementsByClassName("pc-item active");
+  if (activeItems.length > 0) {
+    Array.from(activeItems).forEach((item) => {
+      const anchor = item.querySelector("a"); // Get the <a> tag inside each <li>
+      if (anchor) {
+        anchor.style.color = color; // Apply the color to the anchor tag
+      } else {
+        anchor.style.color = ""; // Reset color to default (if required)
+      }
     });
   }
 
@@ -80,7 +84,14 @@ function applyColor(color) {
   if (navbar) {
     navbar.style.backgroundColor = color; // Set the navbar background color
   }
+
+  // Apply color to dropdown items
+  const dropdownItems = document.querySelectorAll(".dropdown-item");
+  dropdownItems.forEach((item) => {
+    item.style.color = color;
+  });
 }
+
 // =================================== Color Theme End =============================================//
 
 // =================================== Header Menu =============================================//

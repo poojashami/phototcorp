@@ -819,6 +819,7 @@ progress {
 .img-fluid {
   max-width: 100%;
   height: auto;
+  width: 155px;
 }
 
 .img-thumbnail {
@@ -20792,7 +20793,8 @@ pre[class*="language-"] > code {
 ==========================  **/
 .pc-sidebar {
   background: var(--pc-sidebar-background);
-  width: 280px;
+  /* width: 280px; */
+  width: 230px;
   position: fixed;
   top: 0;
   bottom: 0;
@@ -20800,6 +20802,7 @@ pre[class*="language-"] > code {
   overflow: hidden;
   box-shadow: var(--pc-sidebar-shadow);
   border-right: var(--pc-sidebar-border);
+  background-color: #8db3dd !important;
 }
 .pc-sidebar .navbar-wrapper {
   width: 280px;
@@ -20941,7 +20944,7 @@ pre[class*="language-"] > code {
   left: 30px;
 }
 .pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-link {
-  padding: 12px 30px 0px 53px;
+  padding: 12px 30px 0px 33px;
 }
 .pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-link:after {
   left: 28px;
@@ -21004,7 +21007,7 @@ pre[class*="language-"] > code {
   display: flex;
   align-items: center;
   /* padding: 16px 24px; */
-  padding: 6px 45px;
+  padding: 6px 20px;
 }
 .pc-sidebar .m-header .logo-sm {
   display: none;
@@ -21113,6 +21116,7 @@ pre[class*="language-"] > code {
   }
   .pc-sidebar.mob-sidebar-active {
     left: 0;
+    background-color: #8db3dd;
   }
   .pc-sidebar.mob-sidebar-active .navbar-wrapper {
     position: relative;
@@ -21323,12 +21327,14 @@ pre[class*="language-"] > code {
 .pc-header {
   background: #8db3dd;
   color: var(--pc-header-color);
-  min-height: 74px;
+  /* min-height: 58px !important;
+  height:58px !important; */
   box-shadow: var(--pc-header-shadow);
   -webkit-backdrop-filter: blur(7px);
   backdrop-filter: blur(7px);
   position: fixed;
-  left: 280px;
+  /* left: 280px; */
+  left: 229px;
   right: 0;
   z-index: 1025;
   display: flex;
@@ -21338,7 +21344,7 @@ pre[class*="language-"] > code {
   display: inline-flex;
 }
 .pc-header .m-header {
-  height: 74px;
+  height: 58px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21399,7 +21405,7 @@ pre[class*="language-"] > code {
   border-radius: 8px;
 }
 .pc-header .pc-h-item {
-  min-height: 74px;
+  min-height: 57px !important;
   display: flex;
   align-items: center;
   position: relative;
@@ -21905,8 +21911,10 @@ pre[class*="language-"] > code {
 
 .pc-container {
   position: relative;
-  top: 74px;
-  margin-left: 280px;
+  /* top: 74px;
+  margin-left: 280px; */
+  top: 42px;
+  margin-left: 227px;
   min-height: calc(100vh - 135px);
 }
 .pc-container .pc-content {
@@ -21956,6 +21964,7 @@ pre[class*="language-"] > code {
   display: inline-flex;
   background: transparent;
   font-size: 13px;
+  margin: 0;
 }
 .page-header .breadcrumb a {
   color: var(--bs-body-color);
@@ -22183,7 +22192,7 @@ pre[class*="language-"] > code {
   display: block;
   height: 100%;
   width: auto;
-  max-width: 100%;
+  max-width: 87%;
   max-height: 100%;
   scrollbar-width: none;
   -ms-overflow-style: none;
