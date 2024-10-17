@@ -80,10 +80,10 @@ function applyColor(color) {
   }
 
   // Apply color to the navbar
-  const navbar = document.getElementById("navbar");
-  if (navbar) {
-    navbar.style.backgroundColor = color; // Set the navbar background color
-  }
+  // const navbar = document.getElementById("navbar");
+  // if (navbar) {
+  //   navbar.style.backgroundColor = color; // Set the navbar background color
+  // }
 
   // Apply color to dropdown items
   const dropdownItems = document.querySelectorAll(".dropdown-item");

@@ -20802,12 +20802,12 @@ pre[class*="language-"] > code {
   overflow: hidden;
   box-shadow: var(--pc-sidebar-shadow);
   border-right: var(--pc-sidebar-border);
-  background-color: #8db3dd !important;
+  /* background-color: #8db3dd !important; */
 }
 .pc-sidebar .navbar-wrapper {
   width: 280px;
   background: inherit;
-  background-color: #8db3dd;
+  /* background-color: #8db3dd; */
 }
 .pc-sidebar ul {
   list-style: none;
@@ -21325,7 +21325,7 @@ pre[class*="language-"] > code {
 }
 
 .pc-header {
-  background: #8db3dd;
+  /* background: #8db3dd; */
   color: var(--pc-header-color);
   /* min-height: 58px !important;
   height:58px !important; */
@@ -31597,6 +31597,7 @@ div.dataTables_wrapper div.dt-row {
 .auth-main ~ .pct-offcanvas .pc-boxcontainer {
   display: none;
 }
+
 
 /**  =====================
   36. Customizer css end

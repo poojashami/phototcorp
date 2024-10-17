@@ -102,6 +102,63 @@
             margin-bottom: 5px;
             /* Optional: adds spacing between items */
         }
+
+        .container-design {
+            background-color: #ecf5fe;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        /* .side-box {
+            height: 100%;
+        } */
+
+        .form-control.input-design {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        .card.first-card {
+            background-color: #d3e9ff;
+            padding: 20px;
+        }
+
+        .card.second-card {
+            background-color: white;
+        }
+
+        label.fontweight {
+            font-weight: 500;
+        }
+
+        .heading-color {
+            color: #003366;
+
+        }
+
+        .btn-style {
+            background-color: #003366;
+            border-color: #003366;
+            border-radius: 10px;
+        }
+
+        .crew-skill-btn {
+            border-color: #003366;
+            border-radius: 10px;
+            color: #003366
+        }
+
+        .crew-skill-btn.active {
+            background-color: #003366;
+            color: white;
+            border-color: #003366;
+        }
+
+        .crew-skill-btn:hover {
+            background-color: #003366;
+            color: white;
+            border-color: #003366;
+        }
     </style>
 </head>
 
@@ -113,13 +170,11 @@
             <div class="loader-fill"></div>
         </div>
     </div>
-    <nav class="pc-sidebar">
+    <nav id="navbar" class="pc-sidebar">
         <div class="navbar-wrapper">
             <div class="m-header">
                 <a href="../dashboard/index.html" class="b-brand text-primary">
-                    <!-- ========   Change your logo from here   ============ -->
-                    <img src="../assets/images/logo-dark.svg" class="img-fluid logo-lg" alt="logo">
-                    <!-- <span class="badge bg-light-success rounded-pill ms-2 theme-version">v9.0</span> -->
+                    <img src="../assets/images/logo_photo.png" class="img-fluid logo-lg" alt="logo">
                 </a>
             </div>
             <div class="navbar-content">
@@ -127,75 +182,71 @@
                     <li class="pc-item pc-hasmenu">
                         <a href="../dashboard/index.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-status-up"></use>
-                                </svg>
+                                <i class="fas fa-tachometer-alt"></i>
                             </span>
                             <span class="pc-mtext">Dashboard</span>
                         </a>
                     </li>
+
                     <li class="pc-item">
                         <a href="../component/Enquiry.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-direct-inbox"></use>
-                                </svg>
+                                <i class="fas fa-question-circle"></i>
                             </span>
-                            <span class="pc-mtext">Enquiry</span></a>
+                            <span class="pc-mtext">Enquiry</span>
+                        </a>
+
                     </li>
                     <li class="pc-item">
                         <a href="../component/Quotation.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-notification-status"></use>
-                                </svg>
+                                <i class="fas fa-file-alt"></i>
                             </span>
-                            <span class="pc-mtext">Quotation</span></a>
+                            <span class="pc-mtext">Quotation</span>
+                        </a>
                     </li>
                     <li class="pc-item">
                         <a href="../component/Event.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-message-2"></use>
-                                </svg>
+                                <i class="fas fa-calendar-alt"></i>
                             </span>
-                            <span class="pc-mtext">Event</span></a>
+                            <span class="pc-mtext">Event</span>
+                        </a>
                     </li>
-
                     <li class="pc-item pc-hasmenu">
                         <a href="#!" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-shopping-bag"></use>
-                                </svg>
+                                <i class="fas fa-database"></i>
                             </span>
-                            <span class="pc-mtext">Master Entry</span><span class="pc-arrow"><i
-                                    data-feather="chevron-right"></i></span></a>
+                            <span class="pc-mtext">Master Entry</span>
+                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">Customer</a></li>
-                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">Crew</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">Editor</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">
+                                    <i class="fas fa-user-tie" style="margin-right: 15px;"></i> Customer</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">
+                                    <i class="fas fa-users" style="margin-right: 15px;"></i>Crew</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">
+                                    <i class="fas fa-pencil-alt" style="margin-right: 15px;"></i>Editor</a></li>
                         </ul>
                     </li>
-
                     <li class="pc-item">
                         <a href="../component/BookingReceipt.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-document-filter"></use>
-                                </svg>
+                                <i class="fas fa-receipt"></i>
                             </span>
-                            <span class="pc-mtext">Booking Receipt</span></a>
+                            <span class="pc-mtext">Booking Receipt</span>
+                        </a>
+
                     </li>
                     <li class="pc-item">
                         <a href="../application/calendar.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-calendar-1"></use>
-                                </svg>
+                                <i class="fas fa-calendar"></i>
                             </span>
-                            <span class="pc-mtext">Caremony Calendar</span></a>
+                            <span class="pc-mtext">Ceremony Calendar</span>
+                        </a>
+
                     </li>
 
                 </ul>
@@ -609,12 +660,241 @@
                                 <li class="breadcrumb-item" aria-current="page">Editor</li>
                             </ul>
                         </div>
+                        <div class="text-center fs-4 fw-bold heading-color">Editor Entry</div>
 
                     </div>
                 </div>
             </div>
             <div class="row">
-                <h1>Editor Page</h1>
+                <div class="col-md-12 ">
+                    <div class="card first-card">
+                        <div class="card second-card">
+                            <div class="card-body pt-2 ">
+                                <form>
+                                    <div class="row d-flex align-items-center pb-2 px-3">
+                                        <div class="col-md-2">
+                                            <div class="form-check ">
+                                                <input class="form-check-input" type="radio" name="options" id="event"
+                                                    value="event">
+                                                <label class="fontweight" for="event">
+                                                    Freelance
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="options"
+                                                    id="ceremony" value="ceremony">
+                                                <label class="fontweight" for="ceremony">
+                                                    Salaried
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-7 mb-3 ">
+                                            <div class="container-design">
+
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name1" class="col-md-4 col-form-label fontweight">Editor
+                                                        ID*</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Editor ID">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2" class="col-md-4 col-form-label fontweight">
+                                                        Name*</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Name">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2" class="col-md-4 col-form-label fontweight">Mobile
+                                                        No.*</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Mobile Number">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2" class="col-md-4 col-form-label fontweight">
+                                                        Email*</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Email">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2" class="col-md-4 col-form-label fontweight">
+                                                        Emr. Contact Name</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Emr. Contact Name">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2" class="col-md-4 col-form-label fontweight">Emr.
+                                                        Contact No.</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Emr.
+                                                            Contact No.">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2" class="col-md-4 col-form-label fontweight">Date
+                                                        of Birth</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Date of Birth">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2"
+                                                        class="col-md-4 col-form-label fontweight">Gender</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Gender">
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!-- Group 2: Entry section -->
+                                        <div class="col-md-5 mb-3 ">
+                                            <div class="container-design side-box">
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name1"
+                                                        class="col-md-4 col-form-label fontweight">Address*</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Address">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2"
+                                                        class="col-md-4 col-form-label fontweight">State*</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="State">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2"
+                                                        class="col-md-4 col-form-label fontweight">City*</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="City">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2"
+                                                        class="col-md-4 col-form-label fontweight">Pincode*</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Pincode">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="container-design side-box mt-3">
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name1" class="col-md-4 col-form-label fontweight">Editor
+                                                        Image</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Editor
+                                                            Image">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2"
+                                                        class="col-md-4 py-0 my-0 col-form-label fontweight">Editor
+                                                        Document</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Editor
+                                                            Document">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2" class="col-md-4 col-form-label fontweight">Aadhar
+                                                        No</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Aadhar No">
+                                                    </div>
+                                                </div>
+                                                <div class=" row align-items-center px-3">
+                                                    <label for="name2"
+                                                        class="col-md-4 col-form-label fontweight">Comments</label>
+                                                    <div class="col-md-8">
+                                                        <textarea class="form-control input-design" id="name3"
+                                                            placeholder="Enter Remarks" rows="2"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3">
+                                            <div class="container-design">
+                                                <div class="row p-3 align-items-center">
+                                                    <h5 class="pb-2">Crew Skills :-</h5>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Photographer</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Videographer</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Candid Photographer</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Cinematographer</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Drone Pilot</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Lightman</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">LED Screen Operator</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <button type="button" class="btn btn-outline-dark btn-sm me-2"
+                                            style="border-radius: 10px;">Cancel</button>
+                                        <button type="button" class="btn btn-primary btn-sm btn-style">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

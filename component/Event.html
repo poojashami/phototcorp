@@ -102,6 +102,72 @@
             margin-bottom: 5px;
             /* Optional: adds spacing between items */
         }
+
+        .card.first-card {
+            background-color: #fff4ea;
+            padding: 20px;
+        }
+
+        .card.second-card {
+            background-color: white;
+        }
+
+        .container-design {
+            background-color: #fff9f4;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .side-box {
+            height: 100%;
+        }
+
+        .form-control.input-design {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        label.fontweight {
+            font-weight: 500;
+        }
+
+        .heading-color {
+            color: #d35400;
+
+        }
+
+        .btn-style {
+            background-color: #d35400 !important;
+            border-color: #d35400 !important;
+            border-radius: 10px;
+        }
+
+        .btn-style.active,
+        .btn-style:hover {
+            background-color: #d35400 !important;
+            border-color: #d35400 !important;
+            border-radius: 10px;
+        }
+
+        .crew-skill-btn {
+            border-color: #d35400 !important;
+            border-radius: 10px;
+            color: #d35400 !important;
+            /* Default text color */
+        }
+
+        .crew-skill-btn.active,
+        .crew-skill-btn:hover {
+            background-color: #d35400 !important;
+            color: white !important;
+            /* Text color on hover or active */
+            border-color: #d35400 !important;
+        }
+
+        .custom-checkbox:checked {
+            background-color: #d35400;
+            border-color: #d35400;
+        }
     </style>
 </head>
 
@@ -113,13 +179,11 @@
             <div class="loader-fill"></div>
         </div>
     </div>
-    <nav class="pc-sidebar">
+    <nav id="navbar" class="pc-sidebar">
         <div class="navbar-wrapper">
             <div class="m-header">
                 <a href="../dashboard/index.html" class="b-brand text-primary">
-                    <!-- ========   Change your logo from here   ============ -->
-                    <img src="../assets/images/logo-dark.svg" class="img-fluid logo-lg" alt="logo">
-                    <!-- <span class="badge bg-light-success rounded-pill ms-2 theme-version">v9.0</span> -->
+                    <img src="../assets/images/logo_photo.png" class="img-fluid logo-lg" alt="logo">
                 </a>
             </div>
             <div class="navbar-content">
@@ -127,75 +191,71 @@
                     <li class="pc-item pc-hasmenu">
                         <a href="../dashboard/index.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-status-up"></use>
-                                </svg>
+                                <i class="fas fa-tachometer-alt"></i>
                             </span>
                             <span class="pc-mtext">Dashboard</span>
                         </a>
                     </li>
+
                     <li class="pc-item">
                         <a href="../component/Enquiry.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-direct-inbox"></use>
-                                </svg>
+                                <i class="fas fa-question-circle"></i>
                             </span>
-                            <span class="pc-mtext">Enquiry</span></a>
+                            <span class="pc-mtext">Enquiry</span>
+                        </a>
+
                     </li>
                     <li class="pc-item">
                         <a href="../component/Quotation.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-notification-status"></use>
-                                </svg>
+                                <i class="fas fa-file-alt"></i>
                             </span>
-                            <span class="pc-mtext">Quotation</span></a>
+                            <span class="pc-mtext">Quotation</span>
+                        </a>
                     </li>
                     <li class="pc-item">
                         <a href="../component/Event.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-message-2"></use>
-                                </svg>
+                                <i class="fas fa-calendar-alt"></i>
                             </span>
-                            <span class="pc-mtext">Event</span></a>
+                            <span class="pc-mtext">Event</span>
+                        </a>
                     </li>
-
                     <li class="pc-item pc-hasmenu">
                         <a href="#!" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-shopping-bag"></use>
-                                </svg>
+                                <i class="fas fa-database"></i>
                             </span>
-                            <span class="pc-mtext">Master Entry</span><span class="pc-arrow"><i
-                                    data-feather="chevron-right"></i></span></a>
+                            <span class="pc-mtext">Master Entry</span>
+                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">Customer</a></li>
-                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">Crew</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">Editor</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">
+                                    <i class="fas fa-user-tie" style="margin-right: 15px;"></i> Customer</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">
+                                    <i class="fas fa-users" style="margin-right: 15px;"></i>Crew</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">
+                                    <i class="fas fa-pencil-alt" style="margin-right: 15px;"></i>Editor</a></li>
                         </ul>
                     </li>
-
                     <li class="pc-item">
                         <a href="../component/BookingReceipt.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-document-filter"></use>
-                                </svg>
+                                <i class="fas fa-receipt"></i>
                             </span>
-                            <span class="pc-mtext">Booking Receipt</span></a>
+                            <span class="pc-mtext">Booking Receipt</span>
+                        </a>
+
                     </li>
                     <li class="pc-item">
                         <a href="../application/calendar.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-calendar-1"></use>
-                                </svg>
+                                <i class="fas fa-calendar"></i>
                             </span>
-                            <span class="pc-mtext">Caremony Calendar</span></a>
+                            <span class="pc-mtext">Ceremony Calendar</span>
+                        </a>
+
                     </li>
 
                 </ul>
@@ -607,13 +667,296 @@
                                 <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
                                 <li class="breadcrumb-item" aria-current="page">Event</li>
                             </ul>
+                            <div class="text-center fs-4 fw-bold heading-color">Event Entry</div>
                         </div>
 
                     </div>
                 </div>
             </div>
             <div class="row">
-                <h1>Event Page</h1>
+                <div class="col-md-12 ">
+                    <div class="card first-card">
+                        <div class="card second-card mb-0">
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3 ">
+                                            <div class="container-design">
+                                                <div class="row align-items-center px-3 ">
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Customer ID*</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Customer ID*">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Event
+                                                        ID*
+                                                    </label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Event ID*">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Bill
+                                                        Amount</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Bill Amount">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Customer
+                                                        Name*</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Customer Name">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Event
+                                                        Name</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Event Name">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Advance</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Advance">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Phone
+                                                        No.</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Customer Phone No.">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Event
+                                                        For</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Event For">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Discount</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Discount">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Event
+                                                        Status</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Event Status">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Remarks</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Remarks">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Balance
+                                                        Amount</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Balance Amount">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3 ">
+                                            <div class="container-design ">
+                                                <div class="p-3 pb-0">
+                                                    <input class="pointer form-check-input custom-checkbox"
+                                                        type="checkbox" value="option1" id="preference1">
+                                                    <label class="form-check-label fs-5 mx-2 fw-bold fontweight">
+                                                        Post Production Preferences
+                                                    </label>
+                                                </div>
+                                                <div class="row align-items-center px-3 ">
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Album
+                                                        Type</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Album Type">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">No. of
+                                                        Sheets
+                                                    </label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="No. of Sheets">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Photo
+                                                        Print No.</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Photo Print No.">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Media
+                                                        Print</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Media Print">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">No. of
+                                                        Photos</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="No. of Photos">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Remarks</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Remarks">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Cover
+                                                        Type</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Cover Type">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Photo
+                                                        Print Size</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Photo Print Size">
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3 ">
+                                            <div class="container-design ">
+                                                <div class=" p-3 pb-0 ">
+                                                    <h5 class="fw-bold">Ceremoney Details :-</h5>
+                                                </div>
+                                                <div class="row align-items-center px-3 ">
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Ceremony No.</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Ceremony No.">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Ceremony Start Date
+                                                    </label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Ceremony Start Date">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Ceremony End
+                                                        Date</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Ceremony End Date">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Ceremony
+                                                        Name*</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Ceremony Name">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Ceremony Start
+                                                        Time</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Ceremony Start Time">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Ceremony End
+                                                        Time</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Ceremony End Time">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Google
+                                                        Location</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Google Location">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Ceremony
+                                                        Venue*</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Ceremony Venue*">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Ceremony
+                                                        Remarks</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Ceremony remarks">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3">
+                                            <div class="container-design">
+                                                <div class="row p-3 align-items-center">
+                                                    <h5 class="pb-2">Crew Skills :-</h5>
+                                                    <div class="row">
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Photographer</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Videographer</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Candid Photographer</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Cinematographer</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Drone Pilot</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">Lightman</button>
+                                                        </div>
+                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
+                                                            <button type="button"
+                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
+                                                                onclick="toggleSkill(this)">LED Screen Operator</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <button type="button" class="btn btn-outline-dark btn-sm me-2"
+                                            style="border-radius: 10px;">Save Add New</button>
+                                        <button type="button" class="btn btn-primary btn-sm btn-style">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -825,6 +1168,11 @@
                 document.getElementById('theme-selector').innerHTML = data;
             })
             .catch(error => console.error('Error loading CustomTheme.html:', error));
+    </script>
+    <script>
+        function toggleSkill(button) {
+            button.classList.toggle('active');
+        }
     </script>
 </body>
 

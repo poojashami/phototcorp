@@ -103,6 +103,45 @@
             margin-bottom: 5px;
             /* Optional: adds spacing between items */
         }
+
+        .card.first-card {
+            background-color: #ccdfd1;
+            padding: 20px;
+        }
+
+        .card.second-card {
+            background-color: white;
+        }
+
+        .container-design {
+            background-color: #e3f5e8;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .side-box {
+            height: 100%;
+        }
+
+        .form-control.input-design {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        label.fontweight {
+            font-weight: 500;
+        }
+
+        .heading-color {
+            color: #4b735e;
+
+        }
+
+        .btn-style {
+            background-color: #4b735e;
+            border-color: #4b735e;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -116,9 +155,7 @@
         <div class="navbar-wrapper">
             <div class="m-header">
                 <a href="../dashboard/index.html" class="b-brand text-primary">
-                    <!-- ========   Change your logo from here   ============ -->
-                    <img src="../assets/images/logo-dark.svg" class="img-fluid logo-lg" alt="logo">
-                    <!-- <span class="badge bg-light-success rounded-pill ms-2 theme-version">v9.0</span> -->
+                    <img src="../assets/images/logo_photo.png" class="img-fluid logo-lg" alt="logo">
                 </a>
             </div>
             <div class="navbar-content">
@@ -126,75 +163,71 @@
                     <li class="pc-item pc-hasmenu">
                         <a href="../dashboard/index.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-status-up"></use>
-                                </svg>
+                                <i class="fas fa-tachometer-alt"></i>
                             </span>
                             <span class="pc-mtext">Dashboard</span>
                         </a>
                     </li>
+
                     <li class="pc-item">
                         <a href="../component/Enquiry.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-direct-inbox"></use>
-                                </svg>
+                                <i class="fas fa-question-circle"></i>
                             </span>
-                            <span class="pc-mtext">Enquiry</span></a>
+                            <span class="pc-mtext">Enquiry</span>
+                        </a>
+
                     </li>
                     <li class="pc-item">
                         <a href="../component/Quotation.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-notification-status"></use>
-                                </svg>
+                                <i class="fas fa-file-alt"></i>
                             </span>
-                            <span class="pc-mtext">Quotation</span></a>
+                            <span class="pc-mtext">Quotation</span>
+                        </a>
                     </li>
                     <li class="pc-item">
                         <a href="../component/Event.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-message-2"></use>
-                                </svg>
+                                <i class="fas fa-calendar-alt"></i>
                             </span>
-                            <span class="pc-mtext">Event</span></a>
+                            <span class="pc-mtext">Event</span>
+                        </a>
                     </li>
-
                     <li class="pc-item pc-hasmenu">
                         <a href="#!" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-shopping-bag"></use>
-                                </svg>
+                                <i class="fas fa-database"></i>
                             </span>
-                            <span class="pc-mtext">Master Entry</span><span class="pc-arrow"><i
-                                    data-feather="chevron-right"></i></span></a>
+                            <span class="pc-mtext">Master Entry</span>
+                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">Customer</a></li>
-                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">Crew</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">Editor</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">
+                                    <i class="fas fa-user-tie" style="margin-right: 15px;"></i> Customer</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">
+                                    <i class="fas fa-users" style="margin-right: 15px;"></i>Crew</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">
+                                    <i class="fas fa-pencil-alt" style="margin-right: 15px;"></i>Editor</a></li>
                         </ul>
                     </li>
-
                     <li class="pc-item">
                         <a href="../component/BookingReceipt.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-document-filter"></use>
-                                </svg>
+                                <i class="fas fa-receipt"></i>
                             </span>
-                            <span class="pc-mtext">Booking Receipt</span></a>
+                            <span class="pc-mtext">Booking Receipt</span>
+                        </a>
+
                     </li>
                     <li class="pc-item">
                         <a href="../application/calendar.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-calendar-1"></use>
-                                </svg>
+                                <i class="fas fa-calendar"></i>
                             </span>
-                            <span class="pc-mtext">Caremony Calendar</span></a>
+                            <span class="pc-mtext">Ceremony Calendar</span>
+                        </a>
+
                     </li>
 
                 </ul>
@@ -594,14 +627,242 @@
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="../dashboard/index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
-                                <li class="breadcrumb-item" aria-current="page">Quotation</li>
+                                <li class="breadcrumb-item" aria-current="page">Quotation </li>
                             </ul>
+                            <div class="text-center fs-4 fw-bold heading-color">Quotation Enquiry</div>
+
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <h1>Quotation Page</h1>
+                <div class="col-md-12 ">
+                    <div class="card first-card">
+                        <div class="card second-card">
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3 ">
+                                            <div class="container-design">
+                                                <div class=" row align-items-center px-3 pb-3">
+                                                    <div class="col-md-3">
+                                                        <label for="name1" class="col-form-label fontweight">Customer
+                                                            ID*</label>
+
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Customer ID">
+
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label for="name1"
+                                                            class="col-form-label fontweight">Name*</label>
+
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Name">
+
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label for="name1" class="col-form-label fontweight">Mobile
+                                                            No.*</label>
+
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Mobile No.">
+
+                                                    </div>
+                                                    <div class="col-md-3">
+                                                        <label for="name1" class="col-form-label fontweight">Email
+                                                            ID*</label>
+
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Email ID">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 mb-3 ">
+                                            <div class="container-design ">
+                                                <div class="row d-flex align-items-center m-2">
+                                                    <div class="col-md-1">
+                                                        <div class="form-check ">
+                                                            <input class="form-check-input" type="radio" name="options"
+                                                                id="event" value="event">
+                                                            <label class="fontweight" for="event">
+                                                                Event
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-2">
+                                                        <div class="form-check">
+                                                            <input class="form-check-input" type="radio" name="options"
+                                                                id="ceremony" value="ceremony">
+                                                            <label class="fontweight" for="ceremony">
+                                                                Ceremony
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="row" id="eventRadio">
+                                                    <!-- Event and Charges Section -->
+                                                    <div class="col-12">
+                                                        <div class="row d-flex align-items-center m-3">
+                                                            <div class="col-md-2">
+                                                                <label class="fontweight" for="name1">Event Name</label>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <input type="text" class="form-control input-design"
+                                                                    id="name1" placeholder="Event Name">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label class="fontweight" for="name2">Charges</label>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <input type="text" class="form-control input-design"
+                                                                    id="name2" placeholder="Charges">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Headings Section -->
+                                                    <div class="col-12">
+                                                        <div class="row d-flex align-items-center mx-3 mb-3">
+                                                            <div class="col-md-3">
+                                                                <label class="fontweight" for="ceremonyName">Ceremony
+                                                                    Name</label>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label class="fontweight" for="serviceName">Service
+                                                                    Name</label>
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <label class="fontweight" for="charges">Charges</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Input Section -->
+                                                    <div class="col-12">
+                                                        <div id="input-section"
+                                                            class="row d-flex align-items-center mx-3 mb-3">
+                                                            <div class="col-md-3">
+                                                                <input type="text" class="form-control input-design"
+                                                                    placeholder="Enter Ceremony Name">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <input type="text" class="form-control input-design"
+                                                                    placeholder="Enter Service Name">
+                                                            </div>
+                                                            <div class="col-md-3">
+                                                                <input type="text" class="form-control input-design"
+                                                                    placeholder="Enter Charges">
+                                                            </div>
+                                                            <div class="col-md-1 text-center">
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-danger remove-btn">×</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Add More Button -->
+                                                    <div class="col-12 text-center mx-3 mb-3">
+                                                        <button id="add-more-btn"
+                                                            class="btn btn-primary btn-sm btn-style">Add More</button>
+                                                    </div>
+                                                </div>
+                                                <div class="row" id="ceremonyRadio">
+                                                    <!-- Event and Charges Section -->
+                                                    <div class="col-12">
+                                                        <div class="row d-flex align-items-center m-3">
+                                                            <div class="col-md-2">
+                                                                <label class="fontweight" for="name1">Event Name</label>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <input type="text" class="form-control input-design"
+                                                                    id="name1" placeholder="Event Name">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label class="fontweight" for="name2">Charges</label>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <input type="text" class="form-control input-design"
+                                                                    id="name2" placeholder="Charges">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                    <!-- Headings Section -->
+                                                    <div class="col-12">
+                                                        <div class="row d-flex align-items-center mx-3 mb-3">
+                                                            <div class="col-md-2">
+                                                                <label class="fontweight" for="ceremonyName">Ceremony
+                                                                    Name</label>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label class="fontweight" for="serviceName">Service
+                                                                    Name</label>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label class="fontweight" for="charges">Price</label>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label class="fontweight" for="charges">Quantity</label>
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <label class="fontweight" for="charges">Total</label>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                    <!-- Input Section -->
+                                                    <div class="col-12">
+                                                        <div id="input-section"
+                                                            class="row d-flex align-items-center mx-3 mb-3">
+                                                            <div class="col-md-2">
+                                                                <input type="text" class="form-control input-design"
+                                                                    placeholder="Enter Ceremony Name">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <input type="text" class="form-control input-design"
+                                                                    placeholder="Enter Service Name">
+                                                            </div>
+
+                                                            <div class="col-md-2">
+                                                                <input type="text" class="form-control input-design"
+                                                                    placeholder="Enter Charges">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <input type="text" class="form-control input-design"
+                                                                    placeholder="Enter Charges">
+                                                            </div>
+                                                            <div class="col-md-2">
+                                                                <input type="text" class="form-control input-design"
+                                                                    placeholder="Enter Charges">
+                                                            </div>
+                                                            <div class="col-md-1 text-center">
+                                                                <button
+                                                                    class="btn btn-sm btn-outline-danger remove-btn">×</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- Add More Button -->
+                                                    <div class="col-12 text-center mx-3 mb-3">
+                                                        <button id="add-more-btn"
+                                                            class="btn btn-primary btn-sm btn-style">Add More</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-center">
+                                        <button type="button" class="btn btn-outline-dark btn-sm me-2"
+                                            style="border-radius: 10px;">Cancel</button>
+                                        <button type="button" class="btn btn-primary btn-sm btn-style">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

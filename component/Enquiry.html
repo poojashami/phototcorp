@@ -102,6 +102,45 @@
             margin-bottom: 5px;
             /* Optional: adds spacing between items */
         }
+
+        .card.first-card {
+            background-color: #e7e0f3;
+            padding: 20px;
+        }
+
+        .card.second-card {
+            background-color: white;
+        }
+
+        .container-design {
+            background-color: white;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .side-box {
+            height: 100%;
+        }
+
+        .form-control.input-design {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        label.fontweight {
+            font-weight: 500;
+        }
+
+        .heading-color {
+            color: #5a3e7b;
+
+        }
+
+        .btn-style {
+            background-color: #5a3e7b;
+            border-color: #5a3e7b;
+            border-radius: 10px;
+        }
     </style>
 </head>
 
@@ -116,9 +155,7 @@
         <div class="navbar-wrapper">
             <div class="m-header">
                 <a href="../dashboard/index.html" class="b-brand text-primary">
-                    <!-- ========   Change your logo from here   ============ -->
-                    <img src="../assets/images/logo-dark.svg" class="img-fluid logo-lg" alt="logo">
-                    <!-- <span class="badge bg-light-success rounded-pill ms-2 theme-version">v9.0</span> -->
+                    <img src="../assets/images/logo_photo.png" class="img-fluid logo-lg" alt="logo">
                 </a>
             </div>
             <div class="navbar-content">
@@ -126,75 +163,72 @@
                     <li class="pc-item pc-hasmenu">
                         <a href="../dashboard/index.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-status-up"></use>
-                                </svg>
+                                <i class="fas fa-tachometer-alt"></i>
                             </span>
                             <span class="pc-mtext">Dashboard</span>
                         </a>
                     </li>
+
                     <li class="pc-item">
                         <a href="../component/Enquiry.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-direct-inbox"></use>
-                                </svg>
+                                <i class="fas fa-question-circle"></i>
                             </span>
-                            <span class="pc-mtext">Enquiry</span></a>
+                            <span class="pc-mtext">Enquiry</span>
+                        </a>
+
                     </li>
+
                     <li class="pc-item">
                         <a href="../component/Quotation.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-notification-status"></use>
-                                </svg>
+                                <i class="fas fa-file-alt"></i>
                             </span>
-                            <span class="pc-mtext">Quotation</span></a>
+                            <span class="pc-mtext">Quotation</span>
+                        </a>
                     </li>
                     <li class="pc-item">
                         <a href="../component/Event.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-message-2"></use>
-                                </svg>
+                                <i class="fas fa-calendar-alt"></i>
                             </span>
-                            <span class="pc-mtext">Event</span></a>
+                            <span class="pc-mtext">Event</span>
+                        </a>
                     </li>
-
                     <li class="pc-item pc-hasmenu">
                         <a href="#!" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-shopping-bag"></use>
-                                </svg>
+                                <i class="fas fa-database"></i>
                             </span>
-                            <span class="pc-mtext">Master Entry</span><span class="pc-arrow"><i
-                                    data-feather="chevron-right"></i></span></a>
+                            <span class="pc-mtext">Master Entry</span>
+                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
                         <ul class="pc-submenu">
-                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">Customer</a></li>
-                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">Crew</a>
-                            </li>
-                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">Editor</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">
+                                    <i class="fas fa-user-tie" style="margin-right: 15px;"></i> Customer</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">
+                                    <i class="fas fa-users" style="margin-right: 15px;"></i>Crew</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">
+                                    <i class="fas fa-pencil-alt" style="margin-right: 15px;"></i>Editor</a></li>
                         </ul>
                     </li>
-
                     <li class="pc-item">
                         <a href="../component/BookingReceipt.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-document-filter"></use>
-                                </svg>
+                                <i class="fas fa-receipt"></i>
                             </span>
-                            <span class="pc-mtext">Booking Receipt</span></a>
+                            <span class="pc-mtext">Booking Receipt</span>
+                        </a>
+
                     </li>
                     <li class="pc-item">
                         <a href="../application/calendar.html" class="pc-link">
                             <span class="pc-micon">
-                                <svg class="pc-icon">
-                                    <use xlink:href="#custom-calendar-1"></use>
-                                </svg>
+                                <i class="fas fa-calendar"></i>
                             </span>
-                            <span class="pc-mtext">Caremony Calendar</span></a>
+                            <span class="pc-mtext">Ceremony Calendar</span>
+                        </a>
+
                     </li>
 
                 </ul>
@@ -608,12 +642,193 @@
                                 <li class="breadcrumb-item" aria-current="page">Enquiry</li>
                             </ul>
                         </div>
+                        <div class="text-center fs-4 fw-bold heading-color">Add New Enquiry</div>
 
                     </div>
                 </div>
             </div>
             <div class="row">
-                <h1>Enquiry Page</h1>
+                <div class="col-md-12 ">
+                    <div class="card first-card">
+                        <div class="card second-card mb-0">
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12 ">
+                                            <div class="container-design">
+                                                <div class="row">
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Enquiry
+                                                        ID</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Enquiry ID">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Enquiry Date
+                                                    </label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Enquiry Date">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Lead
+                                                        Type</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Lead
+                                                            Type">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Lead
+                                                        Customer ID</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Lead
+                                                            Customer ID">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Lead
+                                                        Cust Name</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Lead
+                                                            Cust Name">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Lead
+                                                        Mobile No</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Lead
+                                                            Mobile No">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Lead
+                                                        Email ID</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Lead
+                                                            Email ID">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Contact
+                                                        Person</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Contact
+                                                            Person">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Alternate
+                                                        No</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Alternate No">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Customer ID</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Customer ID">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Customer Name</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Customer Name">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Mobile
+                                                        No</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="
+                                                            Mobile No">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">
+                                                        Email ID</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Email ID">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Contact
+                                                        Person</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Contact
+                                                            Person">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Alternate
+                                                        No</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Alternate No">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Source
+                                                        of Enquiry</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Source of Enquiry">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Remark
+                                                        of Source</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Remark
+                                                            of Source">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Is
+                                                        Lead Interested</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder=" Lead Interested">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Follow
+                                                        Up Date</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Follow
+                                                            Up Date">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">IVR
+                                                        Number</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="IVR
+                                                            Number">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight py-0">Move
+                                                        to Opportunity</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Move
+                                                            to Opportunity">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Remarks</label>
+                                                    <div class="col-md-4">
+                                                        <textarea class="form-control input-design" id="name3"
+                                                            placeholder="Enter Remarks" rows="2"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex align-items-center justify-content-center mt-5">
+                                        <button type="button" class="btn btn-outline-dark btn-sm me-2"
+                                            style="border-radius: 10px;">Cancel</button>
+                                        <button type="button" class="btn btn-primary btn-sm btn-style">Save</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -825,6 +1040,53 @@
                 document.getElementById('theme-selector').innerHTML = data;
             })
             .catch(error => console.error('Error loading CustomTheme.html:', error));
+    </script>
+    <script>
+        // Add more input rows when 'Add More' is clicked
+        document.getElementById('add-more-btn').addEventListener('click', function () {
+            const inputSection = document.getElementById('input-section');
+
+            // Create a new row for inputs
+            const newRow = document.createElement('div');
+            newRow.className = 'row d-flex align-items-center mt-3 input-row';
+
+            // Ceremony Name Input
+            const ceremonyCol = document.createElement('div');
+            ceremonyCol.className = 'col-md-4';
+            ceremonyCol.innerHTML = '<input type="text" class="form-control" placeholder="Enter Ceremony Name">';
+            newRow.appendChild(ceremonyCol);
+
+            // Service Name Input
+            const serviceCol = document.createElement('div');
+            serviceCol.className = 'col-md-4';
+            serviceCol.innerHTML = '<input type="text" class="form-control" placeholder="Enter Service Name">';
+            newRow.appendChild(serviceCol);
+
+            // Charges Input
+            const chargesCol = document.createElement('div');
+            chargesCol.className = 'col-md-3';
+            chargesCol.innerHTML = '<input type="text" class="form-control" placeholder="Enter Charges">';
+            newRow.appendChild(chargesCol);
+
+            // Remove (cross) button
+            const removeCol = document.createElement('div');
+            removeCol.className = 'col-md-1 text-center';
+            removeCol.innerHTML = '<button class="btn btn-danger remove-btn">×</button>';
+            newRow.appendChild(removeCol);
+
+            // Append the new row to the input section
+            inputSection.appendChild(newRow);
+
+            // Attach the remove event to the remove button
+            removeCol.querySelector('.remove-btn').addEventListener('click', function () {
+                newRow.remove();
+            });
+        });
+
+        // Attach remove event to the initial row's remove button
+        document.querySelector('.remove-btn').addEventListener('click', function () {
+            this.closest('.input-row').remove();
+        });
     </script>
 </body>
 

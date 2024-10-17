@@ -102,11 +102,117 @@
             margin-bottom: 5px;
             /* Optional: adds spacing between items */
         }
+
+        .card.first-card {
+            background-color: #ffefee;
+            padding: 20px;
+        }
+
+        .card.second-card {
+            background-color: white;
+        }
+
+        .container-design {
+            background-color: white;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .side-box {
+            height: 100%;
+        }
+
+        .form-control.input-design {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        label.fontweight {
+            font-weight: 500;
+        }
+
+        .heading-color {
+            color: #c55959;
+
+        }
+
+        .btn-style {
+            background-color: #c55959 !important;
+            border-color: #c55959 !important;
+            border-radius: 10px;
+            font-size: 10px;
+        }
+
+        .btn-style :hover {
+            background-color: #c55959 !important;
+            border-color: #c55959 !important;
+            border-radius: 10px;
+            font-size: 10px;
+        }
+
+        /* Custom styles for table heading */
+        table thead th {
+            background-color: #c55959 !important;
+            /* Force red background */
+            color: white !important;
+            /* White text for better contrast */
+            border-color: #c55959;
+            /* Match the border with background */
+        }
+
+        /* Optional: Custom styles for table rows */
+        table tbody tr:nth-child(even) {
+            background-color: #f2f2f2;
+            /* Light background for alternating rows */
+        }
+
+        /* Table styles */
+        .table-responsive {
+            overflow-x: auto;
+        }
+
+        .table {
+            width: 100%;
+            margin-bottom: 1rem;
+            background-color: transparent;
+            border-collapse: collapse;
+            /* Ensure borders are collapsed */
+            border-radius: 15px;
+            /* Add border radius */
+            overflow: hidden;
+            /* Ensure rounded corners are respected */
+        }
+
+        .table-bordered {
+            border: 2px solid #cedbdc;
+            /* Outer border color */
+        }
+
+        .table-bordered th,
+        .table-bordered td {
+            border: 2px solid #c55959;
+            /* Green grid lines for cells */
+        }
+
+        .table {
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 15px;
+            border-bottom-right-radius: 0;
+            font-size: 11px;
+        }
+
+        th {
+            font-size: 12px !important;
+        }
+
+        .table tbody tr:hover {
+            background-color: #edc5c3 !important;
+        }
     </style>
 </head>
 
-<body data-pc-preset="preset-1" data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme_contrast=""
-    data-pc-theme="light">
+<body data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme_contrast="" data-pc-theme="light">
     <!-- [ Pre-loader ] start -->
     <div class="loader-bg">
         <div class="loader-track">
@@ -115,87 +221,88 @@
     </div>
     <nav id="navbar" class="pc-sidebar">
         <div class="navbar-wrapper">
-          <div class="m-header">
-            <a href="../dashboard/index.html" class="b-brand text-primary">
-              <img src="../assets/images/logo_photo.png" class="img-fluid logo-lg" alt="logo">
-            </a>
-          </div>
-          <div class="navbar-content">
-            <ul class="pc-navbar">
-              <li class="pc-item pc-hasmenu">
-                <a href="../dashboard/index.html" class="pc-link">
-                  <span class="pc-micon">
-                    <i class="fas fa-tachometer-alt"></i>
-                  </span>
-                  <span class="pc-mtext">Dashboard</span>
+            <div class="m-header">
+                <a href="../dashboard/index.html" class="b-brand text-primary">
+                    <img src="../assets/images/logo_photo.png" class="img-fluid logo-lg" alt="logo">
                 </a>
-              </li>
-    
-              <li class="pc-item">
-                <a href="../component/Enquiry.html" class="pc-link">
-                  <span class="pc-micon">
-                    <i class="fas fa-question-circle"></i>
-                  </span>
-                  <span class="pc-mtext">Enquiry</span>
-                </a>
-    
-              </li>
-              <li class="pc-item">
-                <a href="../component/Quotation.html" class="pc-link">
-                  <span class="pc-micon">
-                    <i class="fas fa-file-alt"></i>
-                  </span>
-                  <span class="pc-mtext">Quotation</span>
-                </a>
-              </li>
-              <li class="pc-item">
-                <a href="../component/Event.html" class="pc-link">
-                  <span class="pc-micon">
-                    <i class="fas fa-calendar-alt"></i>
-                  </span>
-                  <span class="pc-mtext">Event</span>
-                </a>
-              </li>
-              <li class="pc-item pc-hasmenu">
-                <a href="#!" class="pc-link">
-                  <span class="pc-micon">
-                    <i class="fas fa-database"></i>
-                  </span>
-                  <span class="pc-mtext">Master Entry</span>
-                  <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
-                </a>
-                <ul class="pc-submenu">
-                  <li class="pc-item"><a class="pc-link" href="../component/Customer.html">
-                      <i class="fas fa-user-tie" style="margin-right: 15px;"></i> Customer</a></li>
-                  <li class="pc-item"><a class="pc-link" href="../component/Crew.html">
-                      <i class="fas fa-users" style="margin-right: 15px;"></i>Crew</a></li>
-                  <li class="pc-item"><a class="pc-link" href="../component/Editor.html">
-                      <i class="fas fa-pencil-alt" style="margin-right: 15px;"></i>Editor</a></li>
+            </div>
+            <div class="navbar-content">
+                <ul class="pc-navbar">
+                    <li class="pc-item pc-hasmenu">
+                        <a href="../dashboard/index.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-tachometer-alt"></i>
+                            </span>
+                            <span class="pc-mtext">Dashboard</span>
+                        </a>
+                    </li>
+
+                    <li class="pc-item">
+                        <a href="../component/Enquiry.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-question-circle"></i>
+                            </span>
+                            <span class="pc-mtext">Enquiry</span>
+                        </a>
+
+                    </li>
+
+                    <li class="pc-item">
+                        <a href="../component/Quotation.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-file-alt"></i>
+                            </span>
+                            <span class="pc-mtext">Quotation</span>
+                        </a>
+                    </li>
+                    <li class="pc-item">
+                        <a href="../component/Event.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-calendar-alt"></i>
+                            </span>
+                            <span class="pc-mtext">Event</span>
+                        </a>
+                    </li>
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-database"></i>
+                            </span>
+                            <span class="pc-mtext">Master Entry</span>
+                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                        </a>
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" href="../component/Customer.html">
+                                    <i class="fas fa-user-tie" style="margin-right: 15px;"></i> Customer</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Crew.html">
+                                    <i class="fas fa-users" style="margin-right: 15px;"></i>Crew</a></li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Editor.html">
+                                    <i class="fas fa-pencil-alt" style="margin-right: 15px;"></i>Editor</a></li>
+                        </ul>
+                    </li>
+                    <li class="pc-item">
+                        <a href="../component/BookingReceipt.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-receipt"></i>
+                            </span>
+                            <span class="pc-mtext">Booking Receipt</span>
+                        </a>
+
+                    </li>
+                    <li class="pc-item">
+                        <a href="../application/calendar.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-calendar"></i>
+                            </span>
+                            <span class="pc-mtext">Ceremony Calendar</span>
+                        </a>
+
+                    </li>
+
                 </ul>
-              </li>
-              <li class="pc-item">
-                <a href="../component/BookingReceipt.html" class="pc-link">
-                  <span class="pc-micon">
-                    <i class="fas fa-receipt"></i>
-                  </span>
-                  <span class="pc-mtext">Booking Receipt</span>
-                </a>
-    
-              </li>
-              <li class="pc-item">
-                <a href="../application/calendar.html" class="pc-link">
-                  <span class="pc-micon">
-                    <i class="fas fa-calendar"></i>
-                  </span>
-                  <span class="pc-mtext">Ceremony Calendar</span>
-                </a>
-    
-              </li>
-    
-            </ul>
-          </div>
+            </div>
         </div>
-      </nav>
+    </nav>
 
     <header class="pc-header">
         <div class="header-wrapper"> <!-- [Mobile Media Block] start -->
@@ -260,6 +367,7 @@
                             </a>
                         </div>
                     </li>
+
                     <!-- Header Menu  -->
                     <div id="abc">
                         <li class="dropdown pc-h-item abc">
@@ -584,7 +692,7 @@
             </div>
         </div>
     </div>
-
+    <!-- [ Header ] end -->
     <!-- [ Main Content ] start -->
     <div class="pc-container">
         <div class="pc-content">
@@ -596,16 +704,144 @@
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="../dashboard/index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
-                                <li class="breadcrumb-item" aria-current="page">Booking Receipt</li>
+                                <li class="breadcrumb-item" aria-current="page">Event</li>
                             </ul>
                         </div>
-
+                        <div class="d-flex justify-content-between mt-2">
+                            <div>
+                                <div class="fs-4 fw-bold heading-color">Ceremony Calendar</div>
+                            </div>
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <input type="date" class="form-control p-1" placeholder="Start Date"
+                                        style="font-size: 10px;">
+                                    <span class="mx-2">To</span>
+                                    <input type="date" class="form-control me-2 p-1" placeholder="End Date"
+                                        style="font-size: 10px;">
+                                    <button type="button" class="btn btn-primary btn-sm btn-style">Search</button>
+                                </div>
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary btn-sm btn-style me-5">
+                                    Filter<i class="fa fa-filter ms-1 " style="font-size: 10px;"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+
             <div class="row">
-                <h1>Booking Page</h1>
+                <div class="col-md-12">
+                    <div class="card first-card">
+                        <div class="card second-card mb-0">
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table table-bordered">
+                                        <thead class="thead-red">
+                                            <tr>
+                                                <th>Action</th>
+                                                <th>Quotation ID</th>
+                                                <th>Customer ID</th>
+                                                <th>Customer Name</th>
+                                                <th>Customer Mobile No.</th>
+                                                <th>Name</th>
+                                                <th>Customer Email ID</th>
+                                                <th>Total Amount</th>
+                                                <th>Date</th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>
+                                                    <div class="btn btn-link  d-flex justify-content-center  p-0"
+                                                        title="Download File">
+                                                        <i class="fas fa-file-alt" style="font-size: 16px;"></i>
+                                                    </div>
+                                                </td>
+                                                <td>QUO123456</td>
+                                                <td>CUST001</td>
+                                                <td>John Doe</td>
+                                                <td>+1234567890</td>
+                                                <td>Jane Smith</td>
+                                                <td>jane.smith@example.com</td>
+                                                <td>$1,000.00</td>
+                                                <td>2024-10-17</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="btn btn-link  d-flex justify-content-center  p-0"
+                                                        title="Download File">
+                                                        <i class="fas fa-file-alt" style="font-size: 16px;"></i>
+                                                    </div>
+                                                </td>
+                                                <td>QUO123457</td>
+                                                <td>CUST002</td>
+                                                <td>Emily Johnson</td>
+                                                <td>+1987654321</td>
+                                                <td>Michael Brown</td>
+                                                <td>michael.brown@example.com</td>
+                                                <td>$2,500.00</td>
+                                                <td>2024-10-16</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="btn btn-link  d-flex justify-content-center  p-0"
+                                                        title="Download File">
+                                                        <i class="fas fa-file-alt" style="font-size: 16px;"></i>
+                                                    </div>
+                                                </td>
+                                                <td>QUO123458</td>
+                                                <td>CUST003</td>
+                                                <td>Alice Davis</td>
+                                                <td>+1122334455</td>
+                                                <td>Robert Wilson</td>
+                                                <td>robert.wilson@example.com</td>
+                                                <td>$3,200.00</td>
+                                                <td>2024-10-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="btn btn-link  d-flex justify-content-center  p-0"
+                                                        title="Download File">
+                                                        <i class="fas fa-file-alt" style="font-size: 16px;"></i>
+                                                    </div>
+                                                </td>
+                                                <td>QUO123458</td>
+                                                <td>CUST003</td>
+                                                <td>Alice Davis</td>
+                                                <td>+1122334455</td>
+                                                <td>Robert Wilson</td>
+                                                <td>robert.wilson@example.com</td>
+                                                <td>$3,200.00</td>
+                                                <td>2024-10-15</td>
+                                            </tr>
+                                            <tr>
+                                                <td>
+                                                    <div class="btn btn-link  d-flex justify-content-center  p-0"
+                                                        title="Download File">
+                                                        <i class="fas fa-file-alt" style="font-size: 16px;"></i>
+                                                    </div>
+                                                </td>
+                                                <td>QUO123458</td>
+                                                <td>CUST003</td>
+                                                <td>Alice Davis</td>
+                                                <td>+1122334455</td>
+                                                <td>Robert Wilson</td>
+                                                <td>robert.wilson@example.com</td>
+                                                <td>$3,200.00</td>
+                                                <td>2024-10-15</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
+
         </div>
     </div>
 
@@ -817,8 +1053,53 @@
             })
             .catch(error => console.error('Error loading CustomTheme.html:', error));
     </script>
+    <script>
+        // Add more input rows when 'Add More' is clicked
+        document.getElementById('add-more-btn').addEventListener('click', function () {
+            const inputSection = document.getElementById('input-section');
 
+            // Create a new row for inputs
+            const newRow = document.createElement('div');
+            newRow.className = 'row d-flex align-items-center mt-3 input-row';
+
+            // Ceremony Name Input
+            const ceremonyCol = document.createElement('div');
+            ceremonyCol.className = 'col-md-4';
+            ceremonyCol.innerHTML = '<input type="text" class="form-control" placeholder="Enter Ceremony Name">';
+            newRow.appendChild(ceremonyCol);
+
+            // Service Name Input
+            const serviceCol = document.createElement('div');
+            serviceCol.className = 'col-md-4';
+            serviceCol.innerHTML = '<input type="text" class="form-control" placeholder="Enter Service Name">';
+            newRow.appendChild(serviceCol);
+
+            // Charges Input
+            const chargesCol = document.createElement('div');
+            chargesCol.className = 'col-md-3';
+            chargesCol.innerHTML = '<input type="text" class="form-control" placeholder="Enter Charges">';
+            newRow.appendChild(chargesCol);
+
+            // Remove (cross) button
+            const removeCol = document.createElement('div');
+            removeCol.className = 'col-md-1 text-center';
+            removeCol.innerHTML = '<button class="btn btn-danger remove-btn">×</button>';
+            newRow.appendChild(removeCol);
+
+            // Append the new row to the input section
+            inputSection.appendChild(newRow);
+
+            // Attach the remove event to the remove button
+            removeCol.querySelector('.remove-btn').addEventListener('click', function () {
+                newRow.remove();
+            });
+        });
+
+        // Attach remove event to the initial row's remove button
+        document.querySelector('.remove-btn').addEventListener('click', function () {
+            this.closest('.input-row').remove();
+        });
+    </script>
 </body>
-<!-- [Body] end -->
 
 </html>
