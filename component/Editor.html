@@ -842,42 +842,22 @@
                                         <div class="col-md-12 mb-3">
                                             <div class="container-design">
                                                 <div class="row p-3 align-items-center">
-                                                    <h5 class="pb-2">Crew Skills :-</h5>
+                                                    <h5 class="pb-2">Editor Skills :-</h5>
                                                     <div class="row">
                                                         <div class="col-12 col-sm-6 col-md-3 mb-2">
                                                             <button type="button"
                                                                 class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
-                                                                onclick="toggleSkill(this)">Photographer</button>
+                                                                onclick="toggleSkill(this)">Video Editor</button>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-md-3 mb-2">
                                                             <button type="button"
                                                                 class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
-                                                                onclick="toggleSkill(this)">Videographer</button>
+                                                                onclick="toggleSkill(this)">Photobook Designer</button>
                                                         </div>
                                                         <div class="col-12 col-sm-6 col-md-3 mb-2">
                                                             <button type="button"
                                                                 class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
-                                                                onclick="toggleSkill(this)">Candid Photographer</button>
-                                                        </div>
-                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
-                                                            <button type="button"
-                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
-                                                                onclick="toggleSkill(this)">Cinematographer</button>
-                                                        </div>
-                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
-                                                            <button type="button"
-                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
-                                                                onclick="toggleSkill(this)">Drone Pilot</button>
-                                                        </div>
-                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
-                                                            <button type="button"
-                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
-                                                                onclick="toggleSkill(this)">Lightman</button>
-                                                        </div>
-                                                        <div class="col-12 col-sm-6 col-md-3 mb-2">
-                                                            <button type="button"
-                                                                class="btn btn-outline-primary btn-sm crew-skill-btn w-100"
-                                                                onclick="toggleSkill(this)">LED Screen Operator</button>
+                                                                onclick="toggleSkill(this)">Photobook Printer</button>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -1106,6 +1086,11 @@
                 document.getElementById('theme-selector').innerHTML = data;
             })
             .catch(error => console.error('Error loading CustomTheme.html:', error));
+    </script>
+    <script>
+        function toggleSkill(button) {
+            button.classList.toggle('active');
+        }
     </script>
 </body>
 <!-- [Body] end -->

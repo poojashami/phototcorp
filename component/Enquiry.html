@@ -668,18 +668,22 @@
                                                         class="col-md-2 col-form-label fontweight">Enquiry Date
                                                     </label>
                                                     <div class="col-md-2">
-                                                        <input type="text" class="form-control input-design" id="name1"
+                                                        <input type="date" class="form-control input-design" id="name1"
                                                             placeholder="Enquiry Date">
                                                     </div>
-                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Lead
-                                                        Type</label>
+                                                    <label for="leadType"
+                                                        class="col-md-2 col-form-label fontweight">Lead Type</label>
                                                     <div class="col-md-2">
-                                                        <input type="text" class="form-control input-design" id="name1"
-                                                            placeholder="Lead
-                                                            Type">
+                                                        <select class="form-control input-design" id="leadType"
+                                                            onchange="toggleCustomerRows()">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="newCustomer">New Customer</option>
+                                                            <option value="existingCustomer">Existing Customer</option>
+                                                        </select>
                                                     </div>
+
                                                 </div>
-                                                <div class="row">
+                                                <div class="row" id="newCustomer" style="display: none;">
                                                     <label for="name1" class="col-md-2 col-form-label fontweight">Lead
                                                         Customer ID</label>
                                                     <div class="col-md-2">
@@ -724,7 +728,7 @@
                                                             placeholder="Alternate No">
                                                     </div>
                                                 </div>
-                                                <div class="row">
+                                                <div class="row" id="existingCustomer" style="display: none;">
                                                     <label for="name1"
                                                         class="col-md-2 col-form-label fontweight">Customer ID</label>
                                                     <div class="col-md-2">
@@ -770,8 +774,13 @@
                                                     <label for="name1" class="col-md-2 col-form-label fontweight">Source
                                                         of Enquiry</label>
                                                     <div class="col-md-2">
-                                                        <input type="text" class="form-control input-design" id="name1"
-                                                            placeholder="Source of Enquiry">
+                                                        <select class="form-control input-design" id="sourceOfEnquiry">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="Facebook">Facebook</option>
+                                                            <option value="Instagram">Instagram</option>
+                                                            <option value="Linkedin">Linkedin</option>
+                                                            <option value="Website">Website</option>
+                                                        </select>
                                                     </div>
                                                     <label for="name1" class="col-md-2 col-form-label fontweight">Remark
                                                         of Source</label>
@@ -783,13 +792,17 @@
                                                     <label for="name1" class="col-md-2 col-form-label fontweight">Is
                                                         Lead Interested</label>
                                                     <div class="col-md-2">
-                                                        <input type="text" class="form-control input-design" id="name1"
-                                                            placeholder=" Lead Interested">
+                                                        <select class="form-control input-design" id="leadInterested">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                            <option value="Call Again">Call Again</option>
+                                                        </select>
                                                     </div>
                                                     <label for="name1" class="col-md-2 col-form-label fontweight">Follow
                                                         Up Date</label>
                                                     <div class="col-md-2">
-                                                        <input type="text" class="form-control input-design" id="name1"
+                                                        <input type="date" class="form-control input-design" id="name1"
                                                             placeholder="Follow
                                                             Up Date">
                                                     </div>
@@ -804,9 +817,11 @@
                                                         class="col-md-2 col-form-label fontweight py-0">Move
                                                         to Opportunity</label>
                                                     <div class="col-md-2">
-                                                        <input type="text" class="form-control input-design" id="name1"
-                                                            placeholder="Move
-                                                            to Opportunity">
+                                                        <select class="form-control input-design" id="movetoOpprtunity">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                        </select>
                                                     </div>
                                                     <label for="name1"
                                                         class="col-md-2 col-form-label fontweight">Remarks</label>
@@ -1042,51 +1057,21 @@
             .catch(error => console.error('Error loading CustomTheme.html:', error));
     </script>
     <script>
-        // Add more input rows when 'Add More' is clicked
-        document.getElementById('add-more-btn').addEventListener('click', function () {
-            const inputSection = document.getElementById('input-section');
+        function toggleCustomerRows() {
+            // Get the selected value from the dropdown
+            const leadType = document.getElementById('leadType').value;
 
-            // Create a new row for inputs
-            const newRow = document.createElement('div');
-            newRow.className = 'row d-flex align-items-center mt-3 input-row';
+            // Hide both rows by default
+            document.getElementById('newCustomer').style.display = 'none';
+            document.getElementById('existingCustomer').style.display = 'none';
 
-            // Ceremony Name Input
-            const ceremonyCol = document.createElement('div');
-            ceremonyCol.className = 'col-md-4';
-            ceremonyCol.innerHTML = '<input type="text" class="form-control" placeholder="Enter Ceremony Name">';
-            newRow.appendChild(ceremonyCol);
-
-            // Service Name Input
-            const serviceCol = document.createElement('div');
-            serviceCol.className = 'col-md-4';
-            serviceCol.innerHTML = '<input type="text" class="form-control" placeholder="Enter Service Name">';
-            newRow.appendChild(serviceCol);
-
-            // Charges Input
-            const chargesCol = document.createElement('div');
-            chargesCol.className = 'col-md-3';
-            chargesCol.innerHTML = '<input type="text" class="form-control" placeholder="Enter Charges">';
-            newRow.appendChild(chargesCol);
-
-            // Remove (cross) button
-            const removeCol = document.createElement('div');
-            removeCol.className = 'col-md-1 text-center';
-            removeCol.innerHTML = '<button class="btn btn-danger remove-btn">×</button>';
-            newRow.appendChild(removeCol);
-
-            // Append the new row to the input section
-            inputSection.appendChild(newRow);
-
-            // Attach the remove event to the remove button
-            removeCol.querySelector('.remove-btn').addEventListener('click', function () {
-                newRow.remove();
-            });
-        });
-
-        // Attach remove event to the initial row's remove button
-        document.querySelector('.remove-btn').addEventListener('click', function () {
-            this.closest('.input-row').remove();
-        });
+            // Show the appropriate row based on the selected lead type
+            if (leadType === 'newCustomer') {
+                document.getElementById('newCustomer').style.display = 'flex';
+            } else if (leadType === 'existingCustomer') {
+                document.getElementById('existingCustomer').style.display = 'flex';
+            }
+        }
     </script>
 </body>
 

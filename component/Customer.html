@@ -725,16 +725,38 @@
                                                     <label for="name2"
                                                         class="col-md-4 col-form-label fontweight">State*</label>
                                                     <div class="col-md-8">
-                                                        <input type="text" class="form-control input-design" id="name1"
-                                                            placeholder="State">
+                                                        <select class="form-control input-design" id="state">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="California">California</option>
+                                                            <option value="Texas">Texas</option>
+                                                            <option value="Florida">Florida</option>
+                                                            <option value="New York">New York</option>
+                                                            <option value="Illinois">Illinois</option>
+                                                            <option value="Ohio">Ohio</option>
+                                                            <option value="Georgia">Georgia</option>
+                                                            <option value="North Carolina">North Carolina</option>
+                                                            <option value="Michigan">Michigan</option>
+                                                            <option value="Pennsylvania">Pennsylvania</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class=" row align-items-center px-3">
                                                     <label for="name2"
                                                         class="col-md-4 col-form-label fontweight">City*</label>
                                                     <div class="col-md-8">
-                                                        <input type="text" class="form-control input-design" id="name1"
-                                                            placeholder="City">
+                                                        <select class="form-control input-design" id="city">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="Los Angeles">Los Angeles</option>
+                                                            <option value="Houston">Houston</option>
+                                                            <option value="Miami">Miami</option>
+                                                            <option value="New York City">New York City</option>
+                                                            <option value="Chicago">Chicago</option>
+                                                            <option value="Dallas">Dallas</option>
+                                                            <option value="Atlanta">Atlanta</option>
+                                                            <option value="Charlotte">Charlotte</option>
+                                                            <option value="Detroit">Detroit</option>
+                                                            <option value="Philadelphia">Philadelphia</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class=" row align-items-center px-3">
@@ -763,14 +785,14 @@
                                                         <label class="fontweight" for="name2">Anniversary Date</label>
                                                     </div>
                                                     <div class="col-md-2">
-                                                        <input type="text" class="form-control input-design" id="name2"
+                                                        <input type="date" class="form-control input-design" id="name2"
                                                             placeholder="Anniversary Date">
                                                     </div>
                                                     <div class="col-md-2">
                                                         <label class="fontweight" for="name3">Date of Birth</label>
                                                     </div>
                                                     <div class="col-md-2">
-                                                        <input type="text" class="form-control input-design" id="name3"
+                                                        <input type="date" class="form-control input-design" id="name3"
                                                             placeholder="Date of Birth">
                                                     </div>
                                                 </div>
@@ -805,7 +827,7 @@
                                     <div class="d-flex align-items-center justify-content-center">
                                         <button type="button" class="btn btn-outline-dark btn-sm me-2"
                                             style="border-radius: 10px;">Cancel</button>
-                                        <button type="button" class="btn btn-primary btn-sm btn-style">Submit</button>
+                                        <button type="button" class="btn btn-primary btn-sm btn-style">Save</button>
                                     </div>
                                 </form>
                             </div>

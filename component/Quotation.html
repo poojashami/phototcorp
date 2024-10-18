@@ -31,6 +31,8 @@
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-14K1GBX9FG"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -138,9 +140,39 @@
         }
 
         .btn-style {
-            background-color: #4b735e;
-            border-color: #4b735e;
+            background-color: #4b735e !important;
+            border-color: #4b735e !important;
             border-radius: 10px;
+        }
+
+        .btn-style.active,
+        .btn-style:hover {
+            background-color: #4b735e !important;
+            border-color: #4b735e !important;
+            border-radius: 10px;
+        }
+
+        .cross-icon {
+            width: 35px;
+            font-size: 14px;
+            padding: 2px;
+            border-radius: 10px;
+        }
+
+        .add-more-btn-style {
+            width: 80px;
+            font-size: 14px;
+            padding: 3px;
+            border-radius: 10px;
+            border-color: #4b735e !important;
+            color: #4b735e !important;
+        }
+
+        .add-more-btn-style:hover {
+            background-color: #4b735e !important;
+            border-color: #4b735e !important;
+            color: white !important;
+            /* border-radius: 10px; */
         }
     </style>
 </head>
@@ -685,21 +717,17 @@
                                             <div class="container-design ">
                                                 <div class="row d-flex align-items-center m-2">
                                                     <div class="col-md-1">
-                                                        <div class="form-check ">
+                                                        <div class="form-check">
                                                             <input class="form-check-input" type="radio" name="options"
-                                                                id="event" value="event">
-                                                            <label class="fontweight" for="event">
-                                                                Event
-                                                            </label>
+                                                                id="event" value="event" checked>
+                                                            <label class="fontweight" for="event">Event</label>
                                                         </div>
                                                     </div>
                                                     <div class="col-md-2">
                                                         <div class="form-check">
                                                             <input class="form-check-input" type="radio" name="options"
                                                                 id="ceremony" value="ceremony">
-                                                            <label class="fontweight" for="ceremony">
-                                                                Ceremony
-                                                            </label>
+                                                            <label class="fontweight" for="ceremony">Ceremony</label>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -740,56 +768,40 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- Input Section -->
-                                                    <div class="col-12">
-                                                        <div id="input-section"
-                                                            class="row d-flex align-items-center mx-3 mb-3">
-                                                            <div class="col-md-3">
-                                                                <input type="text" class="form-control input-design"
-                                                                    placeholder="Enter Ceremony Name">
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <input type="text" class="form-control input-design"
-                                                                    placeholder="Enter Service Name">
-                                                            </div>
-                                                            <div class="col-md-3">
-                                                                <input type="text" class="form-control input-design"
-                                                                    placeholder="Enter Charges">
-                                                            </div>
-                                                            <div class="col-md-1 text-center">
-                                                                <button
-                                                                    class="btn btn-sm btn-outline-danger remove-btn">×</button>
+
+                                                    <div class="col-12 section-container">
+                                                        <div class="input-section-wrapper">
+                                                            <div
+                                                                class="input-section-event row d-flex align-items-center mx-3 mb-3">
+                                                                <div class="col-md-3">
+                                                                    <input type="text" id="ceremony_name"
+                                                                        class="form-control input-design"
+                                                                        placeholder="Enter Ceremony Name">
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <input type="text" id="service_name"
+                                                                        class="form-control input-design"
+                                                                        placeholder="Enter Service Name">
+                                                                </div>
+                                                                <div class="col-md-3">
+                                                                    <input type="text" id="charges"
+                                                                        class="form-control input-design"
+                                                                        placeholder="Enter Charges">
+                                                                </div>
+                                                                <div class="col-md-1 text-center">
+                                                                    <button
+                                                                        class="btn btn-sm btn-outline-danger cross-icon remove-btn d-none">×</button>
+                                                                </div>
                                                             </div>
                                                         </div>
-                                                    </div>
-                                                    <!-- Add More Button -->
-                                                    <div class="col-12 text-center mx-3 mb-3">
-                                                        <button id="add-more-btn"
-                                                            class="btn btn-primary btn-sm btn-style">Add More</button>
+                                                        <div class="text-center">
+                                                            <button
+                                                                class="btn btn-outline-primary add-more-btn add-more-btn-style btn-sm">Add
+                                                                More</button>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="row" id="ceremonyRadio">
-                                                    <!-- Event and Charges Section -->
-                                                    <div class="col-12">
-                                                        <div class="row d-flex align-items-center m-3">
-                                                            <div class="col-md-2">
-                                                                <label class="fontweight" for="name1">Event Name</label>
-                                                            </div>
-                                                            <div class="col-md-2">
-                                                                <input type="text" class="form-control input-design"
-                                                                    id="name1" placeholder="Event Name">
-                                                            </div>
-                                                            <div class="col-md-2">
-                                                                <label class="fontweight" for="name2">Charges</label>
-                                                            </div>
-                                                            <div class="col-md-2">
-                                                                <input type="text" class="form-control input-design"
-                                                                    id="name2" placeholder="Charges">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-
-                                                    <!-- Headings Section -->
+                                                <div class="row mt-4" id="ceremonyRadio">
                                                     <div class="col-12">
                                                         <div class="row d-flex align-items-center mx-3 mb-3">
                                                             <div class="col-md-2">
@@ -801,52 +813,58 @@
                                                                     Name</label>
                                                             </div>
                                                             <div class="col-md-2">
-                                                                <label class="fontweight" for="charges">Price</label>
+                                                                <label class="fontweight" for="price">Price</label>
                                                             </div>
                                                             <div class="col-md-2">
-                                                                <label class="fontweight" for="charges">Quantity</label>
+                                                                <label class="fontweight"
+                                                                    for="quantity">Quantity</label>
                                                             </div>
                                                             <div class="col-md-2">
-                                                                <label class="fontweight" for="charges">Total</label>
-                                                            </div>
-
-                                                        </div>
-                                                    </div>
-                                                    <!-- Input Section -->
-                                                    <div class="col-12">
-                                                        <div id="input-section"
-                                                            class="row d-flex align-items-center mx-3 mb-3">
-                                                            <div class="col-md-2">
-                                                                <input type="text" class="form-control input-design"
-                                                                    placeholder="Enter Ceremony Name">
-                                                            </div>
-                                                            <div class="col-md-2">
-                                                                <input type="text" class="form-control input-design"
-                                                                    placeholder="Enter Service Name">
-                                                            </div>
-
-                                                            <div class="col-md-2">
-                                                                <input type="text" class="form-control input-design"
-                                                                    placeholder="Enter Charges">
-                                                            </div>
-                                                            <div class="col-md-2">
-                                                                <input type="text" class="form-control input-design"
-                                                                    placeholder="Enter Charges">
-                                                            </div>
-                                                            <div class="col-md-2">
-                                                                <input type="text" class="form-control input-design"
-                                                                    placeholder="Enter Charges">
-                                                            </div>
-                                                            <div class="col-md-1 text-center">
-                                                                <button
-                                                                    class="btn btn-sm btn-outline-danger remove-btn">×</button>
+                                                                <label class="fontweight" for="total">Total</label>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- Add More Button -->
-                                                    <div class="col-12 text-center mx-3 mb-3">
-                                                        <button id="add-more-btn"
-                                                            class="btn btn-primary btn-sm btn-style">Add More</button>
+
+                                                    <div class="col-12 section-container">
+                                                        <div class="input-section-wrapper">
+                                                            <div
+                                                                class="input-section-event row d-flex align-items-center mx-3 mb-3">
+                                                                <div class="col-md-2">
+                                                                    <input type="text" id="ceremoney_name"
+                                                                        class="form-control input-design"
+                                                                        placeholder="Enter Ceremony Name">
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <input type="text" id="service_name"
+                                                                        class="form-control input-design"
+                                                                        placeholder="Enter Service Name">
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <input type="text" id="price"
+                                                                        class="form-control input-design"
+                                                                        placeholder="Enter Price">
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <input type="text" id="quantity"
+                                                                        class="form-control input-design"
+                                                                        placeholder="Enter Quantity">
+                                                                </div>
+                                                                <div class="col-md-2">
+                                                                    <input type="text" id="total"
+                                                                        class="form-control input-design"
+                                                                        placeholder="Enter Total">
+                                                                </div>
+                                                                <div class="col-md-1 text-center">
+                                                                    <button
+                                                                        class="btn btn-sm btn-outline-danger cross-icon remove-btn d-none">×</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="text-center">
+                                                            <button
+                                                                class="btn btn-outline-primary add-more-btn add-more-btn-style btn-sm">Add
+                                                                More</button>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
@@ -1074,6 +1092,98 @@
                 document.getElementById('theme-selector').innerHTML = data;
             })
             .catch(error => console.error('Error loading CustomTheme.html:', error));
+    </script>
+    <script>
+        $(document).ready(function () {
+            // Show eventRadio by default
+            $('#eventRadio').show();
+            $('#ceremonyRadio').hide();
+
+            // Radio button change event
+            $('input[name="options"]').change(function () {
+                if ($(this).val() === 'event') {
+                    $('#eventRadio').show();
+                    $('#ceremonyRadio').hide();
+                } else if ($(this).val() === 'ceremony') {
+                    $('#ceremonyRadio').show();
+                    $('#eventRadio').hide();
+                }
+            });
+        });
+    </script>
+    <!-- <script>
+        $(document).ready(function () {
+            // Add More functionality
+            $('#add-more-btn').click(function (e) {
+                e.preventDefault();
+                // Clone the first input section
+                var clonedSection = $('#input-section-event:first').clone();
+                // Clear the input values in the cloned section
+                clonedSection.find('input').val('');
+                // Show the remove button in the cloned section
+                clonedSection.find('.remove-btn').removeClass('d-none');
+                // Append the cloned section to the wrapper
+                $('#input-section-wrapper').append(clonedSection);
+            });
+
+            // Remove functionality (using event delegation for dynamically added elements)
+            $(document).on('click', '.remove-btn', function (e) {
+                e.preventDefault();
+                // Remove the respective row
+                $(this).closest('#input-section-event').remove();
+            });
+        });
+    </script> -->
+    <script>
+        $(document).ready(function () {
+            // Counter to generate unique IDs
+            var rowCounter = 0;
+
+            // Function to add more rows dynamically with unique IDs
+            function addMoreRow(buttonClicked) {
+                // Find the nearest wrapper of the clicked button
+                var sectionWrapper = $(buttonClicked).closest('.section-container').find('.input-section-wrapper');
+
+                // Clone the first input section of this specific wrapper
+                var clonedSection = sectionWrapper.find('.input-section-event:first').clone();
+
+                // Increment the counter to ensure unique IDs
+                rowCounter++;
+
+                // Clear the input values in the cloned section
+                clonedSection.find('input').val('');
+
+                // Update the IDs and labels of each input to be unique
+                clonedSection.find('input').each(function () {
+                    // Get the original ID
+                    var originalId = $(this).attr('id');
+                    if (originalId) {
+                        // Create a new unique ID using the counter
+                        var newId = originalId + '-' + rowCounter;
+                        $(this).attr('id', newId); // Update the input's ID with a unique one
+                    }
+                });
+
+                // Show the remove button in the cloned section
+                clonedSection.find('.remove-btn').removeClass('d-none');
+
+                // Append the cloned section to the correct wrapper
+                sectionWrapper.append(clonedSection);
+            }
+
+            // Event listener for "Add More" button clicks
+            $(document).on('click', '.add-more-btn', function (e) {
+                e.preventDefault();
+                addMoreRow(this);  // Pass the clicked button as context
+            });
+
+            // Remove functionality for dynamically added elements
+            $(document).on('click', '.remove-btn', function (e) {
+                e.preventDefault();
+                $(this).closest('.input-section-event').remove();
+            });
+        });
+
     </script>
 </body>
 
