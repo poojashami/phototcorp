@@ -668,15 +668,15 @@
             <div class="row">
                 <div class="col-md-12 ">
                     <div class="card first-card">
-                        <div class="card second-card">
+                        <div class="card second-card mb-0">
                             <div class="card-body pt-2 ">
                                 <form>
                                     <div class="row d-flex align-items-center pb-2 px-3">
                                         <div class="col-md-2">
-                                            <div class="form-check ">
-                                                <input class="form-check-input" type="radio" name="options" id="event"
-                                                    value="event">
-                                                <label class="fontweight" for="event">
+                                            <div class="form-check">
+                                                <input class="form-check-input" type="radio" name="options"
+                                                    id="freelance" value="freelance" checked>
+                                                <label class="fontweight" for="freelance">
                                                     Freelance
                                                 </label>
                                             </div>
@@ -684,8 +684,8 @@
                                         <div class="col-md-2">
                                             <div class="form-check">
                                                 <input class="form-check-input" type="radio" name="options"
-                                                    id="ceremony" value="ceremony">
-                                                <label class="fontweight" for="ceremony">
+                                                    id="salaried" value="salaried">
+                                                <label class="fontweight" for="salaried">
                                                     Salaried
                                                 </label>
                                             </div>
@@ -748,7 +748,7 @@
                                                     <label for="name2" class="col-md-4 col-form-label fontweight">Date
                                                         of Birth</label>
                                                     <div class="col-md-8">
-                                                        <input type="text" class="form-control input-design" id="name1"
+                                                        <input type="date" class="form-control input-design" id="name1"
                                                             placeholder="Date of Birth">
                                                     </div>
                                                 </div>
@@ -756,10 +756,27 @@
                                                     <label for="name2"
                                                         class="col-md-4 col-form-label fontweight">Gender</label>
                                                     <div class="col-md-8">
-                                                        <input type="text" class="form-control input-design" id="name1"
-                                                            placeholder="Gender">
+                                                        <select class="form-control input-design" id="gender">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="Male">Male</option>
+                                                            <option value="Female">Female</option>
+                                                            <option value="Other">Other</option>
+
+                                                        </select>
                                                     </div>
                                                 </div>
+                                                <div class="row align-items-center px-3" id="salaryField"
+                                                    style="display: none;">
+                                                    <label for="salPerMonth"
+                                                        class="col-md-4 col-form-label fontweight p-0">Salary per
+                                                        Month
+                                                        (INR)</label>
+                                                    <div class="col-md-8">
+                                                        <input type="text" class="form-control input-design mt-2"
+                                                            id="salPerMonth" placeholder="Salary per Month">
+                                                    </div>
+                                                </div>
+
                                             </div>
 
                                         </div>
@@ -778,16 +795,38 @@
                                                     <label for="name2"
                                                         class="col-md-4 col-form-label fontweight">State*</label>
                                                     <div class="col-md-8">
-                                                        <input type="text" class="form-control input-design" id="name1"
-                                                            placeholder="State">
+                                                        <select class="form-control input-design" id="state">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="California">California</option>
+                                                            <option value="Texas">Texas</option>
+                                                            <option value="Florida">Florida</option>
+                                                            <option value="New York">New York</option>
+                                                            <option value="Illinois">Illinois</option>
+                                                            <option value="Ohio">Ohio</option>
+                                                            <option value="Georgia">Georgia</option>
+                                                            <option value="North Carolina">North Carolina</option>
+                                                            <option value="Michigan">Michigan</option>
+                                                            <option value="Pennsylvania">Pennsylvania</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class=" row align-items-center px-3">
                                                     <label for="name2"
                                                         class="col-md-4 col-form-label fontweight">City*</label>
                                                     <div class="col-md-8">
-                                                        <input type="text" class="form-control input-design" id="name1"
-                                                            placeholder="City">
+                                                        <select class="form-control input-design" id="city">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="Los Angeles">Los Angeles</option>
+                                                            <option value="Houston">Houston</option>
+                                                            <option value="Miami">Miami</option>
+                                                            <option value="New York City">New York City</option>
+                                                            <option value="Chicago">Chicago</option>
+                                                            <option value="Dallas">Dallas</option>
+                                                            <option value="Atlanta">Atlanta</option>
+                                                            <option value="Charlotte">Charlotte</option>
+                                                            <option value="Detroit">Detroit</option>
+                                                            <option value="Philadelphia">Philadelphia</option>
+                                                        </select>
                                                     </div>
                                                 </div>
                                                 <div class=" row align-items-center px-3">
@@ -1091,6 +1130,30 @@
         function toggleSkill(button) {
             button.classList.toggle('active');
         }
+    </script>
+    <script>
+        // JavaScript to toggle visibility of salary field
+        document.addEventListener('DOMContentLoaded', function () {
+            const freelanceRadio = document.getElementById('freelance');
+            const salariedRadio = document.getElementById('salaried');
+            const salaryField = document.getElementById('salaryField');
+
+            // Initially hide the salary field
+            salaryField.style.display = 'none';
+
+            // Add event listeners to radio buttons
+            freelanceRadio.addEventListener('change', function () {
+                if (freelanceRadio.checked) {
+                    salaryField.style.display = 'none'; // Hide salary field
+                }
+            });
+
+            salariedRadio.addEventListener('change', function () {
+                if (salariedRadio.checked) {
+                    salaryField.style.display = 'flex'; // Show salary field
+                }
+            });
+        });
     </script>
 </body>
 <!-- [Body] end -->
