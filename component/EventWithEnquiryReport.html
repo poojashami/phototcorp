@@ -91,16 +91,12 @@
 
         .pc-submenu {
             list-style-type: none;
-            /* Removes bullets */
             padding-left: 0;
-            /* Removes default padding */
             margin-left: 0;
-            /* Removes default margin */
         }
 
         .pc-submenu .pc-item {
             margin-bottom: 5px;
-            /* Optional: adds spacing between items */
         }
 
         .card.first-card {
@@ -132,7 +128,7 @@
         }
 
         .heading-color {
-            color: #c97d4b;
+            color: #e97d4b;
 
         }
 
@@ -143,9 +139,9 @@
         }
 
         table thead th {
-            background-color: #fae3d5 !important;
+            background-color: #fae3cd !important;
             color: #1b0b03 !important;
-            border-color: #fae3d5;
+            border-color: #fae3cd;
 
         }
 
@@ -153,7 +149,6 @@
             background-color: #f2f2f2;
         }
 
-        /* Table styles */
         .table-responsive {
             overflow-x: auto;
         }
@@ -163,11 +158,8 @@
             margin-bottom: 1rem;
             background-color: transparent;
             border-collapse: collapse;
-            /* Ensure borders are collapsed */
             border-radius: 15px;
-            /* Add border radius */
             overflow: hidden;
-            /* Ensure rounded corners are respected */
         }
 
         .table-bordered th,
@@ -691,8 +683,22 @@
                                 <li class="breadcrumb-item" aria-current="page">Event</li>
                             </ul>
                         </div>
-                        <div class="text-center fs-4 fw-bold heading-color">View Enquiry</div>
-
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div>
+                                <div class="fs-4 fw-bold heading-color">View Enquiry</div>
+                            </div>
+                            <div class="">
+                                Total Enquiry - 11
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary btn-sm btn-style me-2">
+                                    Filter<i class="fa fa-filter ms-1 " style="font-size: 10px;"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-sm btn-style me-2">
+                                    Export<i class="fa fa-filter ms-1 " style="font-size: 10px;"></i>
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

@@ -20953,7 +20953,7 @@ pre[class*="language-"] > code {
   left: 46px;
 }
 .pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-submenu .pc-link {
-  padding: 12px 30px 12px 80px;
+  padding: 5px 30px 5px 80px;
 }
 .pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-submenu .pc-link:after {
   left: 62px;
@@ -20962,7 +20962,7 @@ pre[class*="language-"] > code {
   left: 63px;
 }
 .pc-sidebar .pc-navbar > .pc-item .pc-submenu .pc-submenu .pc-submenu .pc-link {
-  padding: 12px 30px 12px 95px;
+  padding: 5px 30px 5px 95px;
 }
 .pc-sidebar
   .pc-navbar

@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="description"
-        content="Photo Corp is trending dashboard template made using Bootstrap 5 design framework. Photo Corp is available in Bootstrap, React, CodeIgniter, Angular,  and .net Technologies.">
+        content="Able Pro is trending dashboard template made using Bootstrap 5 design framework. Able Pro is available in Bootstrap, React, CodeIgniter, Angular,  and .net Technologies.">
     <meta name="keywords"
         content="Bootstrap admin template, Dashboard UI Kit, Dashboard Template, Backend Panel, react dashboard, angular dashboard">
     <meta name="author" content="Phoenixcoded">
@@ -91,55 +91,66 @@
 
         .pc-submenu {
             list-style-type: none;
-            /* Removes default bullets */
+            /* Removes bullets */
             padding-left: 0;
-            /* Removes padding from the left */
-        }
-
-        .pc-submenu .pc-item {
-            margin: 0;
+            /* Removes default padding */
+            margin-left: 0;
             /* Removes default margin */
         }
 
-        /* New class to hide the sidebar */
-        .hide-sidebar {
-            display: none;
-        }
-
-        /* Example: styling for the header icon (optional) */
-        .header-icon-container {
-            display: block;
-        }
-
-        /* chart label  */
-        .chart-labels {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        .chart-labels li {
-            display: flex;
-            align-items: center;
+        .pc-submenu .pc-item {
             margin-bottom: 5px;
+            /* Optional: adds spacing between items */
         }
 
-        .color-box {
-            width: 15px;
-            height: 15px;
-            display: inline-block;
-            margin-right: 10px;
-            border-radius: 3px;
+        .card.first-card {
+            background-color: #e7e0f3;
+            padding: 20px;
+        }
+
+        .card.second-card {
+            background-color: white;
+        }
+
+        .container-design {
+            background-color: white;
+            padding: 5px;
+            border-radius: 10px;
+        }
+
+        .side-box {
+            height: 100%;
+        }
+
+        .form-control.input-design {
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        label.fontweight {
+            font-weight: 500;
+        }
+
+        .heading-color {
+            color: #5a3e7b;
+
+        }
+
+        .btn-style {
+            background-color: #5a3e7b;
+            border-color: #5a3e7b;
+            border-radius: 10px;
         }
     </style>
 </head>
 
 <body data-pc-sidebar-caption="true" data-pc-direction="ltr" data-pc-theme_contrast="" data-pc-theme="light">
+    <!-- [ Pre-loader ] start -->
     <div class="loader-bg">
         <div class="loader-track">
             <div class="loader-fill"></div>
         </div>
     </div>
-
     <nav id="navbar" class="pc-sidebar">
         <div class="navbar-wrapper">
             <div class="m-header">
@@ -156,34 +167,70 @@
                             </span>
                             <span class="pc-mtext">Dashboard</span>
                         </a>
-
                     </li>
-                    <li class="pc-item">
-                        <a href="../component/Enquiry.html" class="pc-link">
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
                             <span class="pc-micon">
                                 <i class="fas fa-question-circle"></i>
                             </span>
                             <span class="pc-mtext">Enquiry</span>
+                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                         </a>
-
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" href="../component/Enquiry.html">
+                                    <i class="fas fa-user-tie" style="margin-right: 15px;"></i> Create</a></li>
+                            <li class="pc-item"><a class="pc-link" href="./component/EnquiryReports.html">
+                                    <i class="fas fa-users" style="margin-right: 15px;"></i>Report</a></li>
+                        </ul>
                     </li>
-                    <li class="pc-item">
-                        <a href="../component/Quotation.html" class="pc-link">
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
                             <span class="pc-micon">
                                 <i class="fas fa-file-alt"></i>
                             </span>
                             <span class="pc-mtext">Quotation</span>
+                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                         </a>
-
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" href="../component/QuotationEnqRef.html">
+                                    <i class="fas fa-user-tie" style="margin-right: 15px;"></i> Enquiry Reference</a>
+                            </li>
+                            <li class="pc-item"><a class="pc-link" href="../component/Quotation.html">
+                                    <i class="fas fa-users" style="margin-right: 15px;"></i>Without Reference</a></li>
+                        </ul>
                     </li>
-                    <li class="pc-item">
-                        <a href="../component/Event.html" class="pc-link">
+                    <li class="pc-item pc-hasmenu">
+                        <a href="#!" class="pc-link">
                             <span class="pc-micon">
                                 <i class="fas fa-calendar-alt"></i>
                             </span>
                             <span class="pc-mtext">Event</span>
+                            <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
                         </a>
-
+                        <ul class="pc-submenu">
+                            <li class="pc-item"><a class="pc-link" href="../component/Event.html">
+                                    <i class="fas fa-user-tie" style="margin-right: 15px;"></i> Without Reference</a>
+                            </li>
+                            <li class="pc-item pc-hasmenu">
+                                <a href="#!" class="pc-link">
+                                    <i class="fas fa-users" style="margin-right: 15px;"></i> With Reference
+                                    <span class="pc-arrow"><i data-feather="chevron-right"></i></span>
+                                </a>
+                                <ul class="pc-submenu">
+                                    <li class="pc-item">
+                                        <a class="pc-link" href="./component/EventWithEnquiryReport.html">
+                                            <i class="fas fa-info-circle" style="margin-right: 15px;"></i> Enquiry
+                                        </a>
+                                    </li>
+                                    <li class="pc-item">
+                                        <a class="pc-link" href="./component/EventWithQuotationReport.html">
+                                            <i class="fas fa-file-invoice-dollar" style="margin-right: 15px;"></i>
+                                            Quotation
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
                     </li>
 
                     <li class="pc-item pc-hasmenu">
@@ -203,7 +250,15 @@
                                     <i class="fas fa-pencil-alt" style="margin-right: 15px;"></i>Editor</a></li>
                         </ul>
                     </li>
+                    <li class="pc-item">
+                        <a href="./component/calendar.html" class="pc-link">
+                            <span class="pc-micon">
+                                <i class="fas fa-calendar"></i>
+                            </span>
+                            <span class="pc-mtext">Ceremony Calendar</span>
+                        </a>
 
+                    </li>
                     <li class="pc-item">
                         <a href="../component/BookingReceipt.html" class="pc-link">
                             <span class="pc-micon">
@@ -213,12 +268,13 @@
                         </a>
 
                     </li>
+
                     <li class="pc-item">
                         <a href="../application/calendar.html" class="pc-link">
                             <span class="pc-micon">
                                 <i class="fas fa-calendar"></i>
                             </span>
-                            <span class="pc-mtext">Ceremony Calendar</span>
+                            <span class="pc-mtext">Counter Booking</span>
                         </a>
 
                     </li>
@@ -227,6 +283,7 @@
             </div>
         </div>
     </nav>
+
     <header class="pc-header">
         <div class="header-wrapper"> <!-- [Mobile Media Block] start -->
             <div class="me-auto pc-mob-drp">
@@ -290,9 +347,10 @@
                             </a>
                         </div>
                     </li>
+
                     <!-- Header Menu  -->
                     <div id="abc">
-                        <li class="dropdown pc-h-item">
+                        <li class="dropdown pc-h-item abc">
                             <a class="pc-head-link dropdown-toggle arrow-none me-0" data-bs-toggle="dropdown" href="#"
                                 role="button" aria-haspopup="false" aria-expanded="false">
                                 <svg class="pc-icon">
@@ -301,59 +359,57 @@
                             </a>
 
                             <div class="dropdown-menu dropdown-menu-end pc-h-dropdown">
-                                <a href="../dashboard/index.html" class="dropdown-item ">
+                                <a href="../dashboard/index.html" class="dropdown-item">
                                     <i class="fas fa-tachometer-alt"></i>
                                     <span>Dashboard</span>
                                 </a>
-                                <a href="../component/Enquiry.html" class="dropdown-item ">
+                                <a href="../component/Enquiry.html" class="dropdown-item">
                                     <i class="fas fa-question-circle"></i>
                                     <span>Enquiry</span>
                                 </a>
-                                <a href="../component/Quotation.html" class="dropdown-item ">
+                                <a href="../component/Quotation.html" class="dropdown-item">
                                     <i class="fas fa-file-alt"></i>
                                     <span>Quotation</span>
                                 </a>
-                                <a href="../component/Event.html" class="dropdown-item ">
+                                <a href="../component/Event.html" class="dropdown-item">
                                     <i class="fas fa-calendar-alt"></i>
                                     <span>Event</span>
                                 </a>
 
                                 <!-- Master Entry Toggle -->
-                                <a href="#" class="dropdown-item  dropdown-toggle" id="masterMenuToggle" role="button">
+                                <a href="#" class="dropdown-item dropdown-toggle" id="masterMenuToggle" role="button">
                                     <i class="fas fa-database"></i>
                                     <span>Master Entry</span>
                                 </a>
                                 <!-- Submenu for Master Entry -->
                                 <div class="dropdown-menu" id="masterMenuSubmenu"
-                                    style="display: none; margin-left: 137px; margin-top: -19px;">
-                                    <a href="../component/Customer.html" class="dropdown-item ">
+                                    style="display: block; margin-left: 137px; margin-top: -19px;">
+                                    <a href="../component/Customer.html" class="dropdown-item">
                                         <i class="fas fa-user-tie"></i>
                                         <span>Customer</span>
                                     </a>
-                                    <a href="../component/Crew.html" class="dropdown-item ">
+                                    <a href="../component/Crew.html" class="dropdown-item">
                                         <i class="fas fa-users"></i>
                                         <span>Crew</span>
                                     </a>
-                                    <a href="../component/Editor.html" class="dropdown-item ">
+                                    <a href="../component/Editor.html" class="dropdown-item">
                                         <i class="fas fa-pencil-alt"></i>
                                         <span>Editor</span>
                                     </a>
                                 </div>
 
 
-
-                                <a href="../component/BookingReceipt.html" class="dropdown-item ">
+                                <a href="../component/BookingReceipt.html" class="dropdown-item">
                                     <i class="fas fa-receipt"></i>
                                     <span>Booking Receipt</span>
                                 </a>
-                                <a href="../application/calendar.html" class="dropdown-item ">
+                                <a href="../application/calendar.html" class="dropdown-item">
                                     <i class="fas fa-calendar"></i>
                                     <span>Ceremony Calendar</span>
                                 </a>
                             </div>
                         </li>
                     </div>
-
                     <li class="pc-h-item">
                         <a href="#" class="pc-head-link me-0" data-bs-toggle="offcanvas" data-bs-target="#announcement"
                             aria-controls="announcement">
@@ -561,8 +617,8 @@
                         <p class="mb-0 text-muted">2 min ago</p>
                         <span class="badge dot bg-warning"></span>
                     </div>
-                    <h5 class="mb-3">Photo Corp is Redesigned</h5>
-                    <p class="text-muted">Photo Corp is completely renowed with high aesthetics User Interface.</p>
+                    <h5 class="mb-3">Able Pro is Redesigned</h5>
+                    <p class="text-muted">Able Pro is completely renowed with high aesthetics User Interface.</p>
                     <img src="../assets/images/layout/img-announcement-1.png" alt="img" class="img-fluid mb-3" />
                     <div class="row">
                         <div class="col-12">
@@ -579,8 +635,8 @@
                         <p class="mb-0 text-muted">2 hour ago</p>
                         <span class="badge dot bg-warning"></span>
                     </div>
-                    <h5 class="mb-3">Photo Corp is in best offer price</h5>
-                    <p class="text-muted">Download Photo Corp exclusive on themeforest with best price. </p>
+                    <h5 class="mb-3">Able Pro is in best offer price</h5>
+                    <p class="text-muted">Download Able Pro exclusive on themeforest with best price. </p>
                     <a href="https://1.envato.market/c/1289604/275988/4415?subId1=phoenixcoded&u=https%3A%2F%2Fthemeforest.net%2Fitem%2Fable-pro-responsive-bootstrap-4-admin-template%2F19300403"
                         target="_blank"><img src="../assets/images/layout/img-announcement-2.png" alt="img"
                             class="img-fluid" /></a>
@@ -596,7 +652,7 @@
                         <span class="badge dot bg-warning"></span>
                     </div>
                     <h5 class="mb-3">Featured Dashboard Template</h5>
-                    <p class="text-muted">Do you know Photo Corp is one of the featured dashboard template selected by
+                    <p class="text-muted">Do you know Able Pro is one of the featured dashboard template selected by
                         Themeforest
                         team.?</p>
                     <img src="../assets/images/layout/img-announcement-3.png" alt="img" class="img-fluid" />
@@ -610,15 +666,20 @@
                         <span class="badge dot bg-warning"></span>
                     </div>
                     <h5 class="mb-3">Buy Once - Get Free Updated lifetime</h5>
-                    <p class="text-muted">Get the lifetime free updates once you purchase the Photo Corp.</p>
+                    <p class="text-muted">Get the lifetime free updates once you purchase the Able Pro.</p>
                     <img src="../assets/images/layout/img-announcement-4.png" alt="img" class="img-fluid" />
                 </div>
             </div>
         </div>
     </div>
+    <!-- [ Header ] end -->
 
+
+
+    <!-- [ Main Content ] start -->
     <div class="pc-container">
         <div class="pc-content">
+            <!-- [ breadcrumb ] start -->
             <div class="page-header">
                 <div class="page-block">
                     <div class="row align-items-center">
@@ -626,712 +687,214 @@
                             <ul class="breadcrumb">
                                 <li class="breadcrumb-item"><a href="../dashboard/index.html">Home</a></li>
                                 <li class="breadcrumb-item"><a href="javascript: void(0)">Dashboard</a></li>
+                                <li class="breadcrumb-item" aria-current="page">Enquiry</li>
                             </ul>
                         </div>
+                        <div class="text-center fs-4 fw-bold heading-color">Add New Enquiry</div>
+
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-xxl-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-                                    <h6 class="mb-0">Crew Type</h6>
-                                </div>
-                            </div>
-                            <div class="bg-body p-3 mt-3 rounded">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <canvas id="crewTypePieChart" width="200" height="200"></canvas>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <ul class="chart-labels">
-                                            <li><span class="color-box" style="background-color: #FF6384;"></span>
-                                                Photographer</li>
-                                            <li><span class="color-box" style="background-color: #36A2EB;"></span>
-                                                Assistant</li>
-                                            <li><span class="color-box" style="background-color: #FFCE56;"></span>
-                                                Editor</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-                                    <h6 class="mb-0">Editor Type</h6>
-                                </div>
-                            </div>
-                            <div class="bg-body p-3 mt-3 rounded">
-                                <div class="d-flex align-items-center">
-                                    <div class="flex-shrink-0">
-                                        <canvas id="editorPieChart" width="200" height="200"></canvas>
-                                    </div>
-                                    <div class="flex-grow-1 ms-3">
-                                        <ul class="chart-labels">
-                                            <li><span class="color-box" style="background-color: #FF0000;"></span> Photo
-                                                Editor</li>
-                                            <li><span class="color-box" style="background-color: #008000;"></span> Video
-                                                Editor</li>
-                                            <li><span class="color-box" style="background-color: #FFA500;"></span>
-                                                Graphic Designer</li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="flex-shrink-0">
-                                    Order Booking
-                                </div>
-                                <div class="">
-                                    <label for="fields">Fields:</label>
-                                    <select id="fields" name="fields">
-                                        <option value="">Select</option>
-                                        <option value="event">Event</option>
-                                        <option value="ceremony">Ceremony</option>
-                                        <option value="state">State</option>
-                                        <option value="city">City</option>
-                                        <option value="month">Month</option>
-                                        <option value="year">Year</option>
-                                        <option value="status">Status</option>
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="bg-body p-3 mt-3 rounded">
-                                <div class="">
-                                    <canvas id="orderBookingBarChart" width="400" height="200"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
+                <div class="col-md-12 ">
+                    <div class="card first-card">
+                        <div class="card second-card mb-0">
+                            <div class="card-body">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-md-12 ">
+                                            <div class="container-design">
+                                                <div class="row">
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Enquiry
+                                                        ID</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Enquiry ID">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Enquiry Date
+                                                    </label>
+                                                    <div class="col-md-2">
+                                                        <input type="date" class="form-control input-design" id="name1"
+                                                            placeholder="Enquiry Date">
+                                                    </div>
+                                                    <label for="leadType"
+                                                        class="col-md-2 col-form-label fontweight">Lead Type</label>
+                                                    <div class="col-md-2">
+                                                        <select class="form-control input-design" id="leadType"
+                                                            onchange="toggleCustomerRows()">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="newCustomer">New Customer</option>
+                                                            <option value="existingCustomer">Existing Customer</option>
+                                                        </select>
+                                                    </div>
 
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Collection Day Wise / Month Wise</h6>
-                                </div>
-                            </div>
-                            <div class="bg-body p-3 mt-3 rounded">
-                                <div class="">
-                                    <canvas id="myLineChart" width="400" height="200"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
+                                                </div>
+                                                <div class="row" id="newCustomer" style="display: none;">
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Lead
+                                                        Customer ID</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Lead
+                                                            Customer ID">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Lead
+                                                        Cust Name</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Lead
+                                                            Cust Name">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Lead
+                                                        Mobile No</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Lead
+                                                            Mobile No">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Lead
+                                                        Email ID</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Lead
+                                                            Email ID">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Contact
+                                                        Person</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Contact
+                                                            Person">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Alternate
+                                                        No</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Alternate No">
+                                                    </div>
+                                                </div>
+                                                <div class="row" id="existingCustomer" style="display: none;">
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Customer ID</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Customer ID">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Customer Name</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Customer Name">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Mobile
+                                                        No</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="
+                                                            Mobile No">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">
+                                                        Email ID</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Email ID">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Contact
+                                                        Person</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Contact
+                                                            Person">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Alternate
+                                                        No</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Alternate No">
+                                                    </div>
+                                                </div>
+                                                <div class="row">
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Source
+                                                        of Enquiry</label>
+                                                    <div class="col-md-2">
+                                                        <select class="form-control input-design" id="sourceOfEnquiry">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="Facebook">Facebook</option>
+                                                            <option value="Instagram">Instagram</option>
+                                                            <option value="Linkedin">Linkedin</option>
+                                                            <option value="Website">Website</option>
+                                                        </select>
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Remark
+                                                        of Source</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="Remark
+                                                            of Source">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Is
+                                                        Lead Interested</label>
+                                                    <div class="col-md-2">
+                                                        <select class="form-control input-design" id="leadInterested">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                            <option value="Call Again">Call Again</option>
+                                                        </select>
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">Follow
+                                                        Up Date</label>
+                                                    <div class="col-md-2">
+                                                        <input type="date" class="form-control input-design" id="name1"
+                                                            placeholder="Follow
+                                                            Up Date">
+                                                    </div>
+                                                    <label for="name1" class="col-md-2 col-form-label fontweight">IVR
+                                                        Number</label>
+                                                    <div class="col-md-2">
+                                                        <input type="text" class="form-control input-design" id="name1"
+                                                            placeholder="IVR
+                                                            Number">
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight py-0">Move
+                                                        to Opportunity</label>
+                                                    <div class="col-md-2">
+                                                        <select class="form-control input-design" id="movetoOpprtunity">
+                                                            <option value="" disabled selected>Select</option>
+                                                            <option value="Yes">Yes</option>
+                                                            <option value="No">No</option>
+                                                        </select>
+                                                    </div>
+                                                    <label for="name1"
+                                                        class="col-md-2 col-form-label fontweight">Remarks</label>
+                                                    <div class="col-md-4">
+                                                        <textarea class="form-control input-design" id="name3"
+                                                            placeholder="Enter Remarks" rows="2"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Total Collection</h6>
-                                </div>
-                            </div>
-                            <div class="bg-body p-3 mt-3 rounded">
-                                <div class="">
-                                    <canvas id="totalCollectionBarChart" width="400" height="200"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center">
-                                <div class="flex-shrink-0">
-
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Crew Rating</h6>
-                                </div>
-                            </div>
-                            <div class="bg-body p-3 mt-3 rounded">
-                                <div class="">
-                                    <canvas id="crewRatingBarChart" width="400" height="200"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="flex-shrink-0">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Ceremony Wise Booking</h6>
-                                </div>
-                                <div class="">
-                                    <label for="monthSelect">Month Select:</label>
-                                    <select id="monthSelect" name="monthSelect">
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="bg-body p-3 mt-3 rounded">
-                                <div class="">
-                                    <canvas id="enquiryQuotationBooking"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-xxl-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <div class="flex-shrink-0">
-                                </div>
-                                <div class="flex-grow-1 ms-3">
-                                    <h6 class="mb-0">Potential Business Comming(Next 12 Months) </h6>
-                                </div>
-                                <div class="">
-                                    <label for="nextMonthSelect">Month Select:</label>
-                                    <select id="nextMonthSelect" name="nextMonthSelect">
-                                    </select>
-                                </div>
-                            </div>
-                            <div class="bg-body p-3 mt-3 rounded">
-                                <div class="">
-                                    <canvas id="potentialBusiness"></canvas>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h5 class="mb-0">Monthly Revenue</h5>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="text-end my-2">5.44% <span class="badge bg-success">+2.6%</span> </h5>
-                            <div id="customer-rate-graph"></div>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body border-bottom pb-0">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h5 class="mb-0">Transactions</h5>
-                                <div class="dropdown">
-                                    <a class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none" href="#"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="ti ti-dots-vertical f-18"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item" href="#">Today</a>
-                                        <a class="dropdown-item" href="#">Weekly</a>
-                                        <a class="dropdown-item" href="#">Monthly</a>
+                                    <div class="d-flex align-items-center justify-content-center mt-5">
+                                        <button type="button" class="btn btn-outline-dark btn-sm me-2"
+                                            style="border-radius: 10px;">Cancel</button>
+                                        <button type="button" class="btn btn-primary btn-sm btn-style">Save</button>
                                     </div>
-                                </div>
-                            </div>
-                            <ul class="nav nav-tabs analytics-tab" id="myTab" role="tablist">
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link active" id="analytics-tab-1" data-bs-toggle="tab"
-                                        data-bs-target="#analytics-tab-1-pane" type="button" role="tab"
-                                        aria-controls="analytics-tab-1-pane" aria-selected="true">All
-                                        Transaction</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="analytics-tab-2" data-bs-toggle="tab"
-                                        data-bs-target="#analytics-tab-2-pane" type="button" role="tab"
-                                        aria-controls="analytics-tab-2-pane" aria-selected="false">Success</button>
-                                </li>
-                                <li class="nav-item" role="presentation">
-                                    <button class="nav-link" id="analytics-tab-3" data-bs-toggle="tab"
-                                        data-bs-target="#analytics-tab-3-pane" type="button" role="tab"
-                                        aria-controls="analytics-tab-3-pane" aria-selected="false">Pending</button>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="analytics-tab-1-pane" role="tabpanel"
-                                aria-labelledby="analytics-tab-1" tabindex="0">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border"> AI </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Apple Inc.</h6>
-                                                        <p class="text-muted mb-0"><small>#ABLE-PRO-T00232</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">$210,000</h6>
-                                                        <p class="text-danger mb-0"><i
-                                                                class="ti ti-arrow-down-left"></i> 10.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border" data-bs-toggle="tooltip"
-                                                    data-bs-title="10,000 Tracks">
-                                                    <span>SM</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Spotify Music</h6>
-                                                        <p class="text-muted mb-0"><small>#ABLE-PRO-T10232</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">- 10,000</h6>
-                                                        <p class="text-success mb-0"><i
-                                                                class="ti ti-arrow-up-right"></i> 30.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border bg-light-primary"
-                                                    data-bs-toggle="tooltip" data-bs-title="143 Posts"><span>MD</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Medium</h6>
-                                                        <p class="text-muted mb-0"><small>06:30 pm</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">-26</h6>
-                                                        <p class="text-warning mb-0"><i
-                                                                class="ti ti-arrows-left-right"></i> 5%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border" data-bs-toggle="tooltip"
-                                                    data-bs-title="143 Posts">
-                                                    <span>U</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Uber</h6>
-                                                        <p class="text-muted mb-0"><small>08:40 pm</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">+210,000</h6>
-                                                        <p class="text-success mb-0"><i
-                                                                class="ti ti-arrow-up-right"></i> 10.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border bg-light-warning"
-                                                    data-bs-toggle="tooltip" data-bs-title="143 Posts"><span>OC</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Ola Cabs</h6>
-                                                        <p class="text-muted mb-0"><small>07:40 pm</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">+210,000</h6>
-                                                        <p class="text-success mb-0"><i
-                                                                class="ti ti-arrow-up-right"></i> 10.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="analytics-tab-2-pane" role="tabpanel"
-                                aria-labelledby="analytics-tab-2" tabindex="0">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border" data-bs-toggle="tooltip"
-                                                    data-bs-title="143 Posts">
-                                                    <span>U</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Uber</h6>
-                                                        <p class="text-muted mb-0"><small>08:40 pm</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">+210,000</h6>
-                                                        <p class="text-success mb-0"><i
-                                                                class="ti ti-arrow-up-right"></i> 10.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border bg-light-warning"
-                                                    data-bs-toggle="tooltip" data-bs-title="143 Posts"><span>OC</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Ola Cabs</h6>
-                                                        <p class="text-muted mb-0"><small>07:40 pm</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">+210,000</h6>
-                                                        <p class="text-success mb-0"><i
-                                                                class="ti ti-arrow-up-right"></i> 10.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border">AI</div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Apple Inc.</h6>
-                                                        <p class="text-muted mb-0"><small>#ABLE-PRO-T00232</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">$210,000</h6>
-                                                        <p class="text-danger mb-0"><i
-                                                                class="ti ti-arrow-down-left"></i> 10.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border" data-bs-toggle="tooltip"
-                                                    data-bs-title="10,000 Tracks">
-                                                    <span>SM</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Spotify Music</h6>
-                                                        <p class="text-muted mb-0"><small>#ABLE-PRO-T10232</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">- 10,000</h6>
-                                                        <p class="text-success mb-0"><i
-                                                                class="ti ti-arrow-up-right"></i> 30.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border bg-light-primary"
-                                                    data-bs-toggle="tooltip" data-bs-title="143 Posts"><span>MD</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Medium</h6>
-                                                        <p class="text-muted mb-0"><small>06:30 pm</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">-26</h6>
-                                                        <p class="text-warning mb-0"><i
-                                                                class="ti ti-arrows-left-right"></i> 5%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="tab-pane fade" id="analytics-tab-3-pane" role="tabpanel"
-                                aria-labelledby="analytics-tab-3" tabindex="0">
-                                <ul class="list-group list-group-flush">
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border" data-bs-toggle="tooltip"
-                                                    data-bs-title="10,000 Tracks">
-                                                    <span>SM</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Spotify Music</h6>
-                                                        <p class="text-muted mb-0"><small>#ABLE-PRO-T10232</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">- 10,000</h6>
-                                                        <p class="text-success mb-0"><i
-                                                                class="ti ti-arrow-up-right"></i> 30.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border bg-light-primary"
-                                                    data-bs-toggle="tooltip" data-bs-title="143 Posts"><span>MD</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Medium</h6>
-                                                        <p class="text-muted mb-0"><small>06:30 pm</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">-26</h6>
-                                                        <p class="text-warning mb-0"><i
-                                                                class="ti ti-arrows-left-right"></i> 5%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border" data-bs-toggle="tooltip"
-                                                    data-bs-title="143 Posts">
-                                                    <span>U</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Uber</h6>
-                                                        <p class="text-muted mb-0"><small>08:40 pm</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">+210,000</h6>
-                                                        <p class="text-success mb-0"><i
-                                                                class="ti ti-arrow-up-right"></i> 10.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border"> AI </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Apple Inc.</h6>
-                                                        <p class="text-muted mb-0"><small>#ABLE-PRO-T00232</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">$210,000</h6>
-                                                        <p class="text-danger mb-0"><i
-                                                                class="ti ti-arrow-down-left"></i> 10.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                    <li class="list-group-item">
-                                        <div class="d-flex align-items-center">
-                                            <div class="flex-shrink-0">
-                                                <div class="avtar avtar-s border bg-light-warning"
-                                                    data-bs-toggle="tooltip" data-bs-title="143 Posts"><span>OC</span>
-                                                </div>
-                                            </div>
-                                            <div class="flex-grow-1 ms-3">
-                                                <div class="row g-1">
-                                                    <div class="col-6">
-                                                        <h6 class="mb-0">Ola Cabs</h6>
-                                                        <p class="text-muted mb-0"><small>07:40 pm</small></p>
-                                                    </div>
-                                                    <div class="col-6 text-end">
-                                                        <h6 class="mb-1">+210,000</h6>
-                                                        <p class="text-success mb-0"><i
-                                                                class="ti ti-arrow-up-right"></i> 10.6%</p>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="card-footer">
-                            <div class="row g-2">
-                                <div class="col-md-6">
-                                    <div class="d-grid">
-                                        <button class="btn btn-outline-secondary d-grid"><span
-                                                class="text-truncate w-100">View all
-                                                Transaction History</span></button>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="d-grid">
-                                        <button class="btn btn-primary d-grid"><span class="text-truncate w-100">Create
-                                                new
-                                                Transaction</span></button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="card">
-                        <div class="card-body">
-                            <div class="d-flex align-items-center justify-content-between">
-                                <h5 class="mb-0">Total Income</h5>
-                                <div class="dropdown">
-                                    <a class="avtar avtar-s btn-link-secondary dropdown-toggle arrow-none" href="#"
-                                        data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                        <i class="ti ti-dots-vertical f-18"></i>
-                                    </a>
-                                    <div class="dropdown-menu dropdown-menu-end">
-                                        <a class="dropdown-item" href="#">Today</a>
-                                        <a class="dropdown-item" href="#">Weekly</a>
-                                        <a class="dropdown-item" href="#">Monthly</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="total-income-graph"></div>
-                            <div class="row g-3 mt-3">
-                                <div class="col-sm-6">
-                                    <div class="bg-body p-3 rounded">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="flex-shrink-0">
-                                                <span class="p-1 d-block bg-primary rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
-                                                </span>
-                                            </div>
-                                            <div class="flex-grow-1 ms-2">
-                                                <p class="mb-0">Income</p>
-                                            </div>
-                                        </div>
-                                        <h6 class="mb-0">$23,876 <small class="text-muted"><i
-                                                    class="ti ti-chevrons-up"></i>
-                                                +$763,43</small></h6>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="bg-body p-3 rounded">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="flex-shrink-0">
-                                                <span class="p-1 d-block bg-warning rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
-                                                </span>
-                                            </div>
-                                            <div class="flex-grow-1 ms-2">
-                                                <p class="mb-0">Rent</p>
-                                            </div>
-                                        </div>
-                                        <h6 class="mb-0">$23,876 <small class="text-muted"><i
-                                                    class="ti ti-chevrons-up"></i>
-                                                +$763,43</small></h6>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="bg-body p-3 rounded">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="flex-shrink-0">
-                                                <span class="p-1 d-block bg-success rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
-                                                </span>
-                                            </div>
-                                            <div class="flex-grow-1 ms-2">
-                                                <p class="mb-0">Download</p>
-                                            </div>
-                                        </div>
-                                        <h6 class="mb-0">$23,876 <small class="text-muted"><i
-                                                    class="ti ti-chevrons-up"></i>
-                                                +$763,43</small></h6>
-                                    </div>
-                                </div>
-                                <div class="col-sm-6">
-                                    <div class="bg-body p-3 rounded">
-                                        <div class="d-flex align-items-center mb-2">
-                                            <div class="flex-shrink-0">
-                                                <span class="p-1 d-block bg-light-primary rounded-circle">
-                                                    <span class="visually-hidden">New alerts</span>
-                                                </span>
-                                            </div>
-                                            <div class="flex-grow-1 ms-2">
-                                                <p class="mb-0">Views</p>
-                                            </div>
-                                        </div>
-                                        <h6 class="mb-0">$23,876 <small class="text-muted"><i
-                                                    class="ti ti-chevrons-up"></i>
-                                                +$763,43</small></h6>
-                                    </div>
-                                </div>
+                                </form>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <!-- [ Main Content ] end -->
         </div>
     </div>
-    <!-- [ Main Content ] end -->
 
     <div class="pct-c-btn">
         <a href="#" data-bs-toggle="offcanvas" data-bs-target="#offcanvas_pc_layout">
@@ -1420,7 +983,6 @@
                         <!-- Custom theme -->
                         <div id="theme-selector"></div>
                     </li>
-
                     <li class="list-group-item">
                         <h6 class="mb-1">Sidebar Caption</h6>
                         <p class="text-muted text-sm">Sidebar Caption Hide/Show</p>
@@ -1507,104 +1069,58 @@
             </div>
         </div>
     </div>
-    <!-- [Page Specific JS] start -->
     <script src="../assets/js/plugins/apexcharts.min.js"></script>
     <script src="../assets/js/pages/dashboard-default.js"></script>
-    <!-- [Page Specific JS] end -->
-    <!-- Required Js -->
     <script src="../assets/js/plugins/popper.min.js"></script>
     <script src="../assets/js/plugins/simplebar.min.js"></script>
     <script src="../assets/js/plugins/bootstrap.min.js"></script>
     <script src="../assets/js/fonts/custom-font.js"></script>
     <script src="../assets/js/pcoded.js"></script>
     <script src="../assets/js/plugins/feather.min.js"></script>
+    <script>
+        document.getElementById('sidebar-hide').addEventListener('click', function (event) {
+            event.preventDefault();
+            var abcItem = document.getElementById('abc');
+            if (abcItem.style.display === 'block') {
+                abcItem.style.display = 'none';
+            } else {
+                abcItem.style.display = 'block';
+            }
+        });
+    </script>
     <script>layout_change('light');</script>
     <script>layout_theme_contrast_change('false');</script>
     <script>change_box_container('false');</script>
     <script>layout_caption_change('true');</script>
     <script>layout_rtl_change('false');</script>
-
-
     <script>preset_change("preset-1");</script>
-
-
-
-    <script>
-        // document.getElementById('sidebar-hide').addEventListener('click', function (event) {
-        //   event.preventDefault();
-        //   var abcItem = document.getElementById('abc');
-        //   if (abcItem.style.display === 'none') {
-        //     abcItem.style.display = 'block';
-        //   } else {
-        //     abcItem.style.display = 'none';
-        //   }
-        // });
-
-
-
-
-    </script>
-
-    <!---------------------------- Crew Type --------------------------------->
-    <script>
-        const data = {
-            // labels: ['Photographer', 'Assistant', 'Editor'], // Crew names related to photography
-            datasets: [{
-                data: [300, 50, 100],
-                backgroundColor: ['#FF6384', '#36A2EB', '#FFCE56'],
-                hoverBackgroundColor: ['#FF6384', '#36A2EB', '#FFCE56']
-            }]
-        };
-
-        const ctx = document.getElementById('crewTypePieChart').getContext('2d');
-        new Chart(ctx, {
-            type: 'pie',
-            data: data,
-            options: {
-                responsive: true
-            }
-        });
-    </script>
-
-    <!---------------------------- Editor Type --------------------------------->
-    <script>
-        const editorData = {
-            datasets: [{
-                data: [300, 50, 100],
-                backgroundColor: ['#FF0000', '#008000', '#FFA500'],  // Updated colors
-                hoverBackgroundColor: ['#FF6666', '#00CC00', '#FFB84D']  // Updated hover colors
-            }]
-        };
-
-        const editorctx = document.getElementById('editorPieChart').getContext('2d');
-        new Chart(editorctx, {
-            type: 'pie',
-            data: editorData,
-            options: {
-                responsive: true
-            }
-        });
-    </script>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-
-
-
     <!-- Include the theme JavaScript -->
     <script src="../assets/js/theme.js"></script>
-
     <script>
-        // Load the CustomTheme.html dynamically
-        fetch('CustomTheme.html')
+        fetch('../CustomTheme.html')
             .then(response => response.text())
             .then(data => {
                 document.getElementById('theme-selector').innerHTML = data;
             })
             .catch(error => console.error('Error loading CustomTheme.html:', error));
     </script>
+    <script>
+        function toggleCustomerRows() {
+            // Get the selected value from the dropdown
+            const leadType = document.getElementById('leadType').value;
 
+            // Hide both rows by default
+            document.getElementById('newCustomer').style.display = 'none';
+            document.getElementById('existingCustomer').style.display = 'none';
 
+            // Show the appropriate row based on the selected lead type
+            if (leadType === 'newCustomer') {
+                document.getElementById('newCustomer').style.display = 'flex';
+            } else if (leadType === 'existingCustomer') {
+                document.getElementById('existingCustomer').style.display = 'flex';
+            }
+        }
+    </script>
 </body>
 
 </html>
