@@ -100,16 +100,9 @@
             margin-bottom: 5px;
         }
 
-        /* .card.first-card {
-            background-color: #c6b7e0;
 
-        }
-
-        .card.second-card {
-            background-color: white;
-        } */
         .card.first-card {
-            background-color: #c6b7e0;
+            background-color: #f4eeff;
             padding: 20px;
         }
 
@@ -137,33 +130,27 @@
         }
 
         .heading-color {
-            color: #5a3e7b;
+            color: #8463bd;
 
         }
 
         .btn-style {
-            background-color: #5a3e7b;
-            border-color: #5a3e7b;
+            background-color: #d4c3f1;
+            border-color: #d4c3f1;
             border-radius: 10px;
+            color: black;
         }
 
-        /* Custom styles for table heading */
         table thead th {
-            background-color: #5a3e7b !important;
-            /* Force red background */
-            color: white !important;
-            /* White text for better contrast */
-            /* border-color: #5a3e7b; */
-            /* Match the border with background */
+            background-color: #d4c3f1 !important;
+            color: #29242c !important;
         }
 
-        /* Optional: Custom styles for table rows */
         table tbody tr:nth-child(even) {
             background-color: #f2f2f2;
-            /* Light background for alternating rows */
+
         }
 
-        /* Table styles */
         .table-responsive {
             overflow-x: auto;
         }
@@ -173,22 +160,17 @@
             margin-bottom: 1rem;
             background-color: transparent;
             border-collapse: collapse;
-            /* Ensure borders are collapsed */
             border-radius: 15px;
-            /* Add border radius */
             overflow: hidden;
-            /* Ensure rounded corners are respected */
         }
 
         .table-bordered {
-            border: 2px solid #cedbdc;
-            /* Outer border color */
+            border: 1px solid #cedbdc;
         }
 
         .table-bordered th,
         .table-bordered td {
-            border: 2px solid #c6b7e0;
-            /* Green grid lines for cells */
+            border: 1px solid #a192b3;
         }
 
         .table {
@@ -197,6 +179,7 @@
             border-top-right-radius: 15px;
             border-bottom-right-radius: 0;
             font-size: 11px;
+
         }
 
         th {
@@ -204,7 +187,7 @@
         }
 
         .table tbody tr:hover {
-            background-color: #d4c3f1 !important;
+            background-color: #f4eeff !important;
         }
     </style>
 </head>
@@ -702,7 +685,23 @@
                                 <li class="breadcrumb-item" aria-current="page">Enquiry</li>
                             </ul>
                         </div>
-                        <div class="text-center fs-4 fw-bold heading-color">View Enquiry</div>
+                        <div class="d-flex justify-content-between align-items-center mt-2">
+                            <div>
+                                <div class="fs-4 fw-bold heading-color">View Enquiry</div>
+                            </div>
+                            <div class="">
+                                Total Enquiry - 11
+                            </div>
+                            <div>
+                                <button type="button" class="btn btn-primary btn-sm btn-style me-2">
+                                    Filter<i class="fa fa-filter ms-1 " style="font-size: 10px;"></i>
+                                </button>
+                                <button type="button" class="btn btn-primary btn-sm btn-style me-2">
+                                    Export<i class="fa fa-filter ms-1 " style="font-size: 10px;"></i>
+                                </button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
